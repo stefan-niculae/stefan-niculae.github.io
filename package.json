@@ -1,0 +1,31 @@
+{
+  "name": "stefan1niculae.github.io",
+  "version": "0.0.1",
+  "description": "Website for my resume",
+  "main": "-",
+  "scripts": {
+    "test": "-"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan1niculae/stefan1niculae.github.io.git"
+  },
+  "keywords": [
+    "stefan",
+    "niculae",
+    "cv",
+    "resume"
+  ],
+  "author": "Stefan Niculae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stefan1niculae/stefan1niculae.github.io/issues"
+  },
+  "homepage": "https://github.com/stefan1niculae/stefan1niculae.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-sass": "^2.1.0",
+    "gulp-util": "^3.0.7"
+  }
+}
