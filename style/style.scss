@@ -4,34 +4,56 @@
 }
 
 body {
-    background-color: #F0F0F0;
-}
-
-.cv-wrapper {
-    margin: 0 auto;
-    width: 800px;
-}
-
-.cv-page {
-    margin-top: .5em;
-    margin-bottom: .5em;
-    width: 800px;
+  background-image: url("../images/pattern.png");
+  padding: 50px 0;
 }
 
 
-.download-wrapper {
-    width: 8.5em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
-.cv-download {
-    font-size: 1.25em;
+
+
+@mixin center-wrapper($width) {
 }
 
-.test {
-    color: red;
+.shadow {
+  $shadow-offset: 2px;
+  $shadow-spread: 15px;
+  $shadow-blur: 10px;
+
+          box-shadow: $shadow-offset $shadow-offset $shadow-spread $shadow-blur #C9C9C9;
+  -webkit-box-shadow: $shadow-offset $shadow-offset $shadow-spread $shadow-blur #C9C9C9;
+     -moz-box-shadow: $shadow-offset $shadow-offset $shadow-spread $shadow-blur #C9C9C9;
+}
+
+
+
+
+$resume-width: 900px;
+
+#resume-wrapper {
+  margin: 40px auto;
+  width: $resume-width;
+}
+#resume {
+  width: $resume-width;
+}
+
+#download {
+  text-align: center;
+  font-size: 1.35em;
+  font-family: Helvetica, sans-serif;
+}
+
+
+
+
+$card-width: 550px;
+
+#card-wrapper {
+  margin: auto;
+  margin-top: 170px;
+  width: $card-width;
+}
+#card {
+  width: $card-width;
 }
 
