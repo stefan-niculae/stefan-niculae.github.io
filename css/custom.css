@@ -1,0 +1,150 @@
+body {
+    font-family: "Source Sans Pro", "Open Sans", sans-serif;
+    font-size: 13px;
+}
+.body-container {
+    width: 735px; /* A4 width * 2.5 */
+    height: 1039px; /* A4 height * 2.5 */
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px #dddddd;
+
+    border-radius: 3px;
+
+
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+h1,
+h2 {
+    font-variant: small-caps;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+#name {
+    font-size: 40px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#profile {
+    border-radius: 50%;
+    height: 110px;
+    float: right;
+    margin-right: 10px;
+    background-color: #f8f8f8;
+}
+
+#contact span:not(:last-child)::after {
+    content: '·';
+    margin-left: 4px;
+    margin-right: 1px;
+}
+
+#contact #email {
+    font-size: 1.05em;
+}
+
+#contact {
+    margin-bottom: 60px;
+}
+
+
+
+
+
+
+
+
+
+section h2 {
+    width: 165px;
+    float: left;
+    margin-top: 0;
+}
+section .content {
+    margin-left: 165px;
+    padding-top: 3px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.entry {
+    margin-bottom: 15px;
+}
+
+.role {
+    font-size: 1.3em;
+}
+
+.institute {
+    /*font-variant: all-small-caps;*/
+    text-transform: uppercase;
+    color: blue;
+    text-align: center;
+}
+.institute::before {
+    content: '|';
+    margin-right: 4px;
+    margin-left: 1px;
+}
+
+
+#experience .institute {
+    letter-spacing: 1px; /* Adobe and Intel are short names */
+}
+
+
+
+.interval {
+    float: right;
+    text-align: right;
+}
+
+.interval .from::after {
+    content: ' —';
+}
+.interval .length {
+    font-size: .9em;
+    color: #7d7d7d;
+    /*display: block;*/
+}
+.interval .length::before {
+    content: '(';
+}
+.interval .length::after {
+    content: ')';
+}
+
+.interval .to.expected::after {
+    content: ' (expected)';
+    font-size: .9em;
+    color: #7d7d7d;
+}
+
+.description {
+    display: block;
+}
+
+.link {
+    font-size: .9em;
+}
+.link a {
+    color: #032140;
+}
+
+
+#skills .content {
+    display: flex;
+}
+#skills .category {
+    width: 35%;
+}

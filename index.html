@@ -1,70 +1,197 @@
 <!doctype html>
-
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Stefan Niculae's Resume</title>
-    <meta name="description" content="The resume/CV of Stefan Niculae">
-    <meta name="author" content="Stefan Niculae">
+    <title>Stefan Niculae - Resume</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-image: url("../res/pattern.png");
-        padding: 50px 0;
-      }
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div class="body-container">
 
-      .shadow {
-                box-shadow: 2px 2px 15px 10px #C9C9C9;
-        -webkit-box-shadow: 2px 2px 15px 10px #C9C9C9;
-           -moz-box-shadow: 2px 2px 15px 10px #C9C9C9;
-      }
+<h1 id="name">Stefan Niculae</h1>
+<img id="profile" src="img/face.png" alt="My Picture">
 
-      #resume-wrapper {
-        margin: 40px auto;
-        width: 900px;
-      }
-      #resume {
-        width: 900px;
-      }
+<!--TODO: js to update period-->
+<!--TODO: decide on a date format (momentjs?)-->
 
-      #download {
-        text-align: center;
-        font-size: 1.35em;
-        font-family: Helvetica, sans-serif;
-      }
+<section id="contact">
+    <span id="email">stefan1niculae@gmail.com</span>
+    <span id="phone">0040 722 740 469</span>
+    <span id="location">Bucharest, RO</span>
+    <!--<span class="linkedin"><a href="https://www.linkedin.com/in/stefan1niculae">stefan1niculae</a></span>-->
+    <!--<span class="github"><a href="https://www.github.com/stefan1niculae">stefan1niculae</a></span>-->
+</section>
 
-      #card-wrapper {
-        margin: auto;
-        margin-top: 170px;
-        width: 550px;
-      }
-      #card {
-        width: 550px;
-      }
-    </style>
-  </head>
+<section id="experience">
+    <h2>Experience</h2>
 
-  <body>
+    <div class="content">
 
-    <div id="resume-wrapper">
-      <img id="resume" class="shadow" src="res/resume.png">
+        <div class="entry" id="adobe">
+            <div class="interval">
+                <span class="from">March 2016</span>
+                <span class="to">Present</span>
+                <span class="length">11 months</span>
+            </div>
+
+            <span class="role">Data Science Intern</span>
+            <span class="institute">Adobe</span>
+
+            <span class="description">Implemented pipeline and ensemble classifier for selecting retention-impactful product features. Developed interactive visualization for user action similarities. Next-action prediction using deep neural networks.</span>
+        </div>
+
+        <div class="entry" id="intel">
+            <div class="interval">
+                <span class="from">June 2015</span>
+                <span class="to">Sept 2015</span>
+                <span class="length">4 months</span>
+            </div>
+
+            <span class="role">IoT Performance Optimization Intern</span>
+            <span class="institute">Intel</span>
+
+            <span class="description">Developed a tool that processes performance metrics and provides statistical insight in a visual way. Worked on a robust spike-detection algorithm.</span>
+        </div>
+
+        <div class="entry" id="clu">
+            <div class="interval">
+                <span class="from">July 2014</span>
+                <span class="to">April 2015</span>
+                <span class="length">9 months</span>
+            </div>
+
+            <span class="role">Game Developer</span>
+            <span class="institute">Clu Games</span>
+
+            <span class="description">Worked in a small team. Developed catchy one-tap, small-to-medium games for Android and iOS.</span>
+            <span class="link"><a href="https://play.google.com/store/apps/details?id=com.jmg.pet">play.google.com/store/apps/details?id=com.jmg.pet</a></span>
+        </div>
+
     </div>
-    <p id="download">
-      <a href="res/Stefan Niculae Resume.pdf"
-         download="Stefan Niculae.pdf"
-         target="_blank">
-         Download PDF
-      </a>
-    </p>
+</section>
 
-    <div id="card-wrapper">
-      <img id="card" class="shadow" src="res/card.png">
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="content">
+
+        <div class="entry" id="masters">
+            <div class="interval">
+                <span class="from">2016</span>
+                <span class="to expected">2018</span>
+            </div>
+
+            <span class="role">Master's in Artificial Intelligence</span>
+            <span class="institute">University of Bucharest</span>
+
+            <span class="description">Research assistant for <i>Declarative Programming</i> and <i>Formal Languages and Automata</i> classes.</span>
+            <span class="link" title="Laboratory site"><a href="https://stefan1niculae.github.io/haskell-labs">stefan1niculae.github.io/haskell-labs</a></span>
+        </div>
+
+        <div class="entry" id="bachelors">
+            <div class="interval">
+                <span class="from">2013</span>
+                <span class="to">2016</span>
+            </div>
+
+            <span class="role">Bachelors of Computer Science</span>
+            <span class="institute">University of Bucharest</span>
+
+            <span class="description">Second highest finishing grade (9.8/10 overall). Finished 3-year Psychopedagogy module. Volunteer at the Student's Association, Finance dept.</span>
+            <span class="link" title="Screenshots & sources"><a href="https://github.com/stefan1niculae/school-projects ">github.com/stefan1niculae/school-projects </a></span>
+        </div>
+
+        <div class="entry" id="trainings">
+            <span class="role">Trainings</span>
+            <span class="description">User Experience, Public Speaking, Time Management, Leadership</span>
+        </div>
+
     </div>
+</section>
 
-  </body>
+<section id="skills">
+    <h2>Skills</h2>
+
+    <div class="content">
+        <div class="category">
+            <span class="name">Data Science</span>
+            <ul class="languages">
+                <li class="language">Python</li>
+                <li class="language">SQL</li>
+                <li class="language">Machine Learning</li>
+                <li class="language">Statistics</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <span class="name">Web</span>
+            <ul class="languages">
+                <li class="language">Django, Flask</li>
+                <li class="language">React</li>
+                <li class="language">D3</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <span class="name">Other</span>
+            <ul class="languages">
+                <li class="language">C#</li>
+                <li class="language">Haskell</li>
+                <li class="language">Swift</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Personal Projects</h2>
+
+    <div class="content">
+        <div class="entry" id="holocron">
+            <span class="name">Holocron</span>
+            <span class="description">nn viz</span>
+            <div class="link" title="WIP"><a href="https://holocron-ai.herokuapp.com">holocron-ai.herokuapp.com</a></div>
+        </div>
+
+        <div class="entry" id="easyvim">
+            <span class="name">Easy Vim</span>
+            <span class="description">Learning platform for the Vim editor. High emphasis on UX. Low learning curve. Features smart suggestions and gamification.</span>
+            <div class="link" title="Screenshots & source"><a href="https://github.com/stefan1niculae/easyVim">github.com/stefan1niculae/easyVim</a></div>
+        </div>
+
+        <div class="entry" id="senile">
+            <span class="name">Senile de Foc</span>
+            <span class="description">2D tank game. 4 players online death-match. Features intuitive menus & controls, multiple playstyles and rich visual effects.</span>
+            <div class="link" title="Screenshots & source"><a href="https://github.com/stefan1niculae/senile-de-foc">github.com/stefan1niculae/senile-de-foc</a></div>
+        </div>
+
+        <div class="entry" id="gsa">
+            <span class="name">Google Student Ambassador</span>
+            <span class="description">Organized weekly Android meetings. Taught beginners how to make an application from scratch and discussed best practices.</span>
+        </div>
+    </div>
+</section>
+
+<section id="hobbies">
+    <h2>Hobbies</h2>
+
+    <div class="content">
+        <ul>
+            <li>Hearthstone</li>
+            <li>Gym</li>
+            <li>Vim</li>
+            <li>Sci-Fi/Fantasy</li>
+            <li>Ping Pong</li>
+            <li>Volunteering</li>
+        </ul>
+    </div>
+</section>
+
+</div>
+</body>
 </html>
