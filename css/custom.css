@@ -180,8 +180,18 @@ section#contact {
     padding-left: 0;
 }
 
+
+
+
+
 #hobbies .hobby {
     width: 100px;
     padding-right: 10px;
     text-align: center;
+}
+
+.hobby img {
+    height: 30px;
+    opacity: .5;
+    display: block;
 }
