@@ -6,7 +6,7 @@ body {
     width: 735px; /* A4 width * 2.5 */
     height: 1039px; /* A4 height * 2.5 */
 
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 0 20px #dddddd;
@@ -29,16 +29,16 @@ h2 {
 #name {
     font-size: 40px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 5px;
 }
 
 #profile {
     border-radius: 50%;
-    height: 110px;
+    height: 100px;
     float: right;
     margin-right: 10px;
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
 }
 
 #contact span:not(:last-child)::after {
@@ -56,6 +56,20 @@ h2 {
 }
 
 
+hr {
+    border: none;
+    border-top: 1px solid #eeeeee;
+}
+
+hr {
+    margin: 20px 15px;
+}
+
+hr#top-separator {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
 
 
 
@@ -64,17 +78,21 @@ h2 {
 
 
 section h2 {
-    width: 165px;
+    width: 145px;
     float: left;
     margin-top: 0;
 }
 section .content {
-    margin-left: 165px;
+    margin-left: 145px;
     padding-top: 3px;
 }
 
-section {
-    margin-bottom: 30px;
+/*section {*/
+    /*margin-bottom: 30px;*/
+/*}*/
+
+section#contact {
+    margin-bottom: 25px;
 }
 
 .entry {
@@ -83,12 +101,13 @@ section {
 
 .role {
     font-size: 1.3em;
+    margin-bottom: 10px;
 }
 
 .institute {
     /*font-variant: all-small-caps;*/
     text-transform: uppercase;
-    color: blue;
+    color: #595959;
     text-align: center;
 }
 .institute::before {
@@ -104,7 +123,8 @@ section {
 
 
 
-.interval {
+.interval,
+#projects .link {
     float: right;
     text-align: right;
 }
@@ -141,10 +161,27 @@ section {
     color: #032140;
 }
 
-
-#skills .content {
-    display: flex;
+#skills,
+#hobby{
+    display: table;
 }
+
+#skills .category,
+#hobbies .hobby {
+    display: table-cell;
+}
+
 #skills .category {
-    width: 35%;
+    padding-right: 75px;
+}
+
+#skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#hobbies .hobby {
+    width: 100px;
+    padding-right: 10px;
+    text-align: center;
 }
