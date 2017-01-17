@@ -1,15 +1,17 @@
 // Colors
 $black:         #333333
 $lighter-black: #555555
-$lighter-gray:  #7d7d7d
+$light-gray: #5f5f5f
+$lighter-gray: #9b9b9b
 $lightest-gray: #f5f5f5
 
 // Sizes
 $A4-width:  210px
 $A4-height: 297px
 $paper-scale: 3.5
-$paper-horiz-padding: 35px
-$left-col-width: 145px
+$paper-left-padding: 25px
+$paper-right-padding: 35px
+$left-col-width: 150px
 
 
 
@@ -21,14 +23,18 @@ body
 
 
 #paper
-  width:  $A4-width  * $paper-scale - 2 * $paper-horiz-padding
+  width:  $A4-width  * $paper-scale - ($paper-left-padding + $paper-right-padding)
   height: $A4-height * $paper-scale
 
-  margin: 20px auto
-  padding: 10px $paper-horiz-padding
+  margin-left: auto
+  margin-right: auto
+  padding-top: 20px
+  padding-left: $paper-left-padding
+  padding-right: $paper-right-padding
 
   @media not print
-    box-shadow: 0 0 20px #dddddd
+    margin-top: 25px
+    box-shadow: 0 0 30px #ebebeb
     border-radius: 3px
 
 
@@ -42,7 +48,7 @@ body
 
 #name
   font-size: 3em
-  margin-top: 20px
+  margin-top: 25px
 
 #name, #contact
   display: inline-block
@@ -73,13 +79,11 @@ hr
   border: none
   border-top: 1px solid #eeeeee
   &#top-separator
-    margin: 35px 10px
+    margin: 45px 10px
 
-.link
-  display: none // TODO: @media not print
-  font-size: .9em
-  a
-    color: #032140
+a
+  color: $black
+  //color: #032140 // TODO
 
 
 
@@ -95,10 +99,12 @@ section
     width: $left-col-width
   .content
     margin-left: $left-col-width
-  .entry
-    margin: 15px 0
   .content hr
-    margin: 20px 5px
+    margin: 25px 5px
+
+  &#work .entry,
+  &#education .entry
+    margin: 25px 0
 
 
   // Color
@@ -110,7 +116,7 @@ section
   .place,
   .interval .length,
   .interval .to.expected::after
-    color: $lighter-gray
+    color: $light-gray
 
 
   // Work & Education: top part
@@ -121,9 +127,9 @@ section
   .place
     text-align: center
     &::before
-      content: '|'
-      margin-right: 4px
-      margin-left: 1px
+      content: ' | '
+      margin-left: 2px
+      margin-right: 2px
   &#work .place  // company
     letter-spacing: 1px // "Adobe" and "Intel" are short names
     text-transform: uppercase
@@ -140,13 +146,14 @@ section
       &::after
         content: ')'
     .to.expected::after
-      content: ' (expected)'
+      //content: ' (expected)'
     .length
+      display: none // TODO
       font-size: .9em
 
-  .description
+  &#work .description,
+  &#education .description
     display: block
-
 
   // Skills & Hobbies: layout
   &#skills, #hobby
@@ -170,11 +177,21 @@ section
   &#projects
     .name
       font-size: 1.15em
-    .link::before
-      content: '— '
+
+    .description::before
+      content: ' — '
+
+    .wip::after
+      content: ' (wip)'
+      color: $light-gray
+
+    .entry
+      margin: 5px 0
+
+
 
   &#hobbies
-    margin-top: 40px  // instead of <hr>
+    margin-top: 50px  // instead of <hr>
     header
       padding-top: 10px  // "center" Hobbies text with icons and text in content
     .hobby
@@ -183,3 +200,21 @@ section
       img
         height: 25px
         opacity: .4
+
+
+// Footers
+#paper-footer,
+footer
+  text-align: center
+  color: $lighter-gray
+
+#paper-footer
+  margin-top: 15px
+  font-size: .85em
+  @media not print
+    display: none
+
+footer
+  font-size: 1.1em
+  @media print
+    display: none
