@@ -62,12 +62,12 @@ hr {
 }
 
 hr {
-    margin: 20px 15px;
+    margin: 25px 15px;
 }
 
 hr#top-separator {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    margin-top: 45px;
+    margin-bottom: 45px;
 }
 
 
@@ -123,8 +123,9 @@ section#contact {
 
 
 
-.interval,
-#projects .link {
+.interval
+/*, #projects .link */
+{
     float: right;
     text-align: right;
 }
@@ -173,7 +174,7 @@ section#contact {
 }
 
 #skills .category {
-    width: 200px;
+    width: 170px;
 }
 
 #skills .category .name {
@@ -201,6 +202,9 @@ section#contact {
 
 #projects .name {
     font-size: 1.15em;
+}
+#projects .link::before {
+    content: '— ';
 }
 
 
