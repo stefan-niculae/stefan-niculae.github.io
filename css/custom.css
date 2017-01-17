@@ -9,7 +9,7 @@ body {
     /*margin-top: 20px;*/
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 0 20px #dddddd;
+    /*box-shadow: 0 0 20px #dddddd;*/
 
     border-radius: 3px;
 
@@ -166,32 +166,66 @@ section#contact {
     display: table;
 }
 
+
 #skills .category,
 #hobbies .hobby {
     display: table-cell;
 }
 
 #skills .category {
-    padding-right: 75px;
+    width: 200px;
+}
+
+#skills .category .name {
+    font-size: 1.3em;
 }
 
 #skills ul {
     list-style-type: none;
     padding-left: 0;
+
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 
 
 
 
+
+
+
+
+
+
+
+#projects .name {
+    font-size: 1.15em;
+}
+
+
+
+
+
+
+
+
+
+
+#hobbies {
+    margin-top: 40px;
+}
+
+#hobbies h2 {
+    padding-top: 10px;
+}
+
 #hobbies .hobby {
-    width: 100px;
-    padding-right: 10px;
+    width: 150px;
     text-align: center;
 }
 
 .hobby img {
-    height: 30px;
+    height: 25px;
     opacity: .5;
-    display: block;
 }
