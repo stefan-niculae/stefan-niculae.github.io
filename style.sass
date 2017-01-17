@@ -11,6 +11,8 @@ $A4-height: 297px
 $paper-scale: 3.5
 $paper-left-padding: 25px
 $paper-right-padding: 35px
+$paper-width: $A4-width  * $paper-scale - ($paper-left-padding + $paper-right-padding)
+$paper-height: $A4-height * $paper-scale
 $left-col-width: 150px
 
 
@@ -23,8 +25,9 @@ body
 
 
 #paper
-  width:  $A4-width  * $paper-scale - ($paper-left-padding + $paper-right-padding)
-  height: $A4-height * $paper-scale
+  width:  $paper-width
+  //height: $paper-height // development: uncomment this
+  padding-bottom: 25px // development: comment this
 
   margin-left: auto
   margin-right: auto
@@ -48,7 +51,7 @@ body
 
 #name
   font-size: 3em
-  margin-top: 25px
+  margin-top: 20px
 
 #name, #contact
   display: inline-block
@@ -56,8 +59,8 @@ body
 #contact
   color: $lighter-black
   span:not(:last-child)::after
-    content: '·'
-    margin-left: 4px
+    content: ' · '
+    margin-left: 2px
     margin-right: 1px
   #email
     font-size: 1.05em // lowercase letters are small
@@ -146,9 +149,9 @@ section
       &::after
         content: ')'
     .to.expected::after
-      //content: ' (expected)'
+      //content: ' (expected)' // show expected mention?
     .length
-      display: none // TODO
+      display: none // show nr months duration?
       font-size: .9em
 
   &#work .description,
@@ -165,7 +168,8 @@ section
 
   &#skills
     .category
-      width: 170px // TODO flexbox?
+      width: ($paper-width - $left-col-width) * .32 // HACK
+      display: inline-block
       .name
         font-size: 1.3em
     ul
@@ -193,13 +197,18 @@ section
   &#hobbies
     margin-top: 50px  // instead of <hr>
     header
-      padding-top: 10px  // "center" Hobbies text with icons and text in content
+      padding-top: 7px  // "center" Hobbies text with icons and text in content
+
+    .content
+      display: flex
+      justify-content: space-between
+      padding-left: 10px
+      padding-right: 10px
     .hobby
-      width: 150px  // TODO flexbox?
       text-align: center
       img
-        height: 25px
-        opacity: .4
+        height: 20px
+        opacity: .35
 
 
 // Footers

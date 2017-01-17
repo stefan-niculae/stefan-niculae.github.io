@@ -5,7 +5,7 @@ body {
 
 #paper {
   width: 675px;
-  height: 1039.5px;
+  padding-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
@@ -24,7 +24,7 @@ body {
 
 #name {
   font-size: 3em;
-  margin-top: 25px; }
+  margin-top: 20px; }
 
 #name, #contact {
   display: inline-block; }
@@ -32,8 +32,8 @@ body {
 #contact {
   color: #555555; }
   #contact span:not(:last-child)::after {
-    content: "·";
-    margin-left: 4px;
+    content: " · ";
+    margin-left: 2px;
     margin-right: 1px; }
   #contact #email {
     font-size: 1.05em; }
@@ -104,7 +104,8 @@ section#skills, section #hobby {
 section#skills .category, section#hobbies .hobby {
   display: table-cell; }
 section#skills .category {
-  width: 170px; }
+  width: 168px;
+  display: inline-block; }
   section#skills .category .name {
     font-size: 1.3em; }
 section#skills ul {
@@ -124,13 +125,17 @@ section#projects .entry {
 section#hobbies {
   margin-top: 50px; }
   section#hobbies header {
-    padding-top: 10px; }
+    padding-top: 7px; }
+  section#hobbies .content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px; }
   section#hobbies .hobby {
-    width: 150px;
     text-align: center; }
     section#hobbies .hobby img {
-      height: 25px;
-      opacity: 0.4; }
+      height: 20px;
+      opacity: 0.35; }
 
 #paper-footer,
 footer {
