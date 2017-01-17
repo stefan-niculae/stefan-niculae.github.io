@@ -1,0 +1,185 @@
+// Colors
+$black:         #333333
+$lighter-black: #555555
+$lighter-gray:  #7d7d7d
+$lightest-gray: #f5f5f5
+
+// Sizes
+$A4-width:  210px
+$A4-height: 297px
+$paper-scale: 3.5
+$paper-horiz-padding: 35px
+$left-col-width: 145px
+
+
+
+
+// Paper layout
+body
+  font-family: "Source Sans Pro", "Open Sans", sans-serif
+  font-size: 13px
+
+
+#paper
+  width:  $A4-width  * $paper-scale - 2 * $paper-horiz-padding
+  height: $A4-height * $paper-scale
+
+  margin: 20px auto
+  padding: 10px $paper-horiz-padding
+
+  @media not print
+    box-shadow: 0 0 20px #dddddd
+    border-radius: 3px
+
+
+
+
+// Top part
+#name, section header
+  font-variant: small-caps
+  font-weight: normal
+  letter-spacing: 1px
+
+#name
+  font-size: 3em
+  margin-top: 20px
+
+#name, #contact
+  display: inline-block
+
+#contact
+  color: $lighter-black
+  span:not(:last-child)::after
+    content: '·'
+    margin-left: 4px
+    margin-right: 1px
+  #email
+    font-size: 1.05em // lowercase letters are small
+
+#face
+  float: right
+  margin-right: 10px
+  height: 100px
+
+  border-radius: 50%
+  background-color: $lightest-gray
+
+
+
+
+
+// Spacing
+hr
+  border: none
+  border-top: 1px solid #eeeeee
+  &#top-separator
+    margin: 35px 10px
+
+.link
+  display: none // TODO: @media not print
+  font-size: .9em
+  a
+    color: #032140
+
+
+
+
+
+
+// Main content
+section
+  // Spacing
+  header
+    font-size: 1.5em
+    float: left
+    width: $left-col-width
+  .content
+    margin-left: $left-col-width
+  .entry
+    margin: 15px 0
+  .content hr
+    margin: 20px 5px
+
+
+  // Color
+  &#skills li,
+  .description,
+  .interval
+    color: $lighter-black
+
+  .place,
+  .interval .length,
+  .interval .to.expected::after
+    color: $lighter-gray
+
+
+  // Work & Education: top part
+  .role
+    font-size: 1.3em
+    margin-bottom: 10px
+
+  .place
+    text-align: center
+    &::before
+      content: '|'
+      margin-right: 4px
+      margin-left: 1px
+  &#work .place  // company
+    letter-spacing: 1px // "Adobe" and "Intel" are short names
+    text-transform: uppercase
+  &#education .place // school
+    font-variant: small-caps
+
+  .interval
+    float: right
+    .from::after
+      content: ' —'
+    .length
+      &::before
+        content: ' ('
+      &::after
+        content: ')'
+    .to.expected::after
+      content: ' (expected)'
+    .length
+      font-size: .9em
+
+  .description
+    display: block
+
+
+  // Skills & Hobbies: layout
+  &#skills, #hobby
+    display: table
+
+  &#skills .category,
+  &#hobbies .hobby
+    display: table-cell
+
+  &#skills
+    .category
+      width: 170px // TODO flexbox?
+      .name
+        font-size: 1.3em
+    ul
+      list-style-type: none
+      padding-left: 0
+      margin-top: 5px
+      margin-bottom: 0
+
+  &#projects
+    .name
+      font-size: 1.15em
+    .link::before
+      content: '— '
+
+  &#hobbies
+    margin-top: 40px  // instead of <hr>
+    header
+      padding-top: 10px  // "center" Hobbies text with icons and text in content
+    .hobby
+      width: 150px  // TODO flexbox?
+      text-align: center
+      img
+        height: 25px
+        opacity: .4

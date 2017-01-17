@@ -1,0 +1,176 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Stefan Niculae - Resume
+    link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro', rel='stylesheet')
+    link(rel='stylesheet', href='style.css')
+
+body
+  #paper
+
+    header#name Stefan Niculae
+    img#face(src='img/face-bw.png', alt='My Picture')
+    // TODO: js to update period
+
+    section#contact
+      span#email stefan1niculae@gmail.com
+      span#phone 0040 722 740 469
+      span#location Bucharest, RO
+      // <span class="linkedin"><a href="https://www.linkedin.com/in/stefan1niculae">stefan1niculae</a></span>
+      // <span class="github"><a href="https://www.github.com/stefan1niculae">stefan1niculae</a></span>
+    hr#top-separator
+
+
+    section#work
+      header Experience
+      .content
+
+        #adobe.entry
+          .interval
+            span.from March 2016
+            span.to Present
+            span.length 11 months
+          span.role Data Science Intern
+          span.place Adobe
+          span.description Implemented an ensemble classifier for determining retention-impactful product features. Worked on a predictor for user's next action in Adobe XD. Developed a product recommender system for Adobe BC.
+
+        #intel.entry
+          .interval
+            span.from June 2015
+            span.to Sept 2015
+            span.length 4 months
+          span.role Performance Optimization Intern
+          span.place Intel
+          span.description Developed a tool which processes performance metrics and provides statistical insight in a visual way. Worked on a robust spike-detection algorithm.
+
+        #clu.entry
+          .interval
+            span.from July 2014
+            span.to April 2015
+            span.length 9 months
+          span.role Game Developer
+          span.place Clu Games
+          span.description Created catchy small-to-medium games for Android and iOS.
+            span.link
+              a(href='https://play.google.com/store/apps/details?id=com.jmg.pet') play.google.com/store/apps/details?id=com.jmg.pet
+        hr
+
+
+    section#education
+      header Education
+      .content
+
+        #masters.entry
+          .interval
+            span.from 2016
+            span.to.expected 2018
+          span.role Master's in Artificial Intelligence
+          span.place University of Bucharest
+          span.description TA for Declarative Programming and Formal Languages & Automata.
+            span.link(title='Laboratory site')
+              a(href='https://stefan1niculae.github.io/haskell-labs') stefan1niculae.github.io/haskell-labs
+
+        #bachelors.entry
+          .interval
+            span.from 2013
+            span.to 2016
+          span.role Bachelor of Computer Science
+          span.place University of Bucharest
+          span.description  Graduated with second highest grade, 9.8/10. Finished 3-year Psychopedagogy module. Volunteered at the Student's Association, Finance dept.
+            span.link(title='Screenshots & sources')
+              a(href='https://github.com/stefan1niculae/school-projects ') github.com/stefan1niculae/school-projects
+
+        #trainings.entry
+          span.role Trainings
+          span.description Introductory for: user experience, public speaking, time management, leadership.
+        hr
+
+
+    section#skills
+      header Skills
+      .content
+
+        .category
+          span.name Data Science
+          ul
+            li Python
+            li Machine Learning
+            li Statistics
+
+        .category
+          span.name Web
+          ul
+            li Django, Flask
+            li React
+            li SQL
+
+        .category
+          span.name Other
+          ul
+            li C#
+            li Haskell
+            li Swift
+        hr
+
+
+    section#projects
+      header Personal Projects
+      .content
+
+        #holocron.entry
+          span.name Holocron
+          span.link(title='WIP')
+            a(href='https://holocron-ai.herokuapp.com') holocron-ai.herokuapp.com
+          span.description  Interactive visualization of ML models learning, providing a better understanding of the algorithms.
+
+        #easyvim.entry
+          span.name Easy Vim
+          span.link(title='Screenshots & source')
+            a(href='https://github.com/stefan1niculae/easyVim') github.com/stefan1niculae/easyVim
+          span.description Learning platform for Vim. High emphasis on approachability. Smart suggestions and gamification.
+
+        #senile.entry
+          span.name Senile de Foc
+          span.link(title='Screenshots & source')
+            a(href='https://github.com/stefan1niculae/senile-de-foc') github.com/stefan1niculae/senile-de-foc
+          span.description  2D tank game. 4 players online death-match. Multiple play-styles, cartoony style and rich visual effects.
+
+        #gsa.entry
+          span.name Google Student Ambassador
+          span.description Organized weekly Android meetings, for beginners and for more advanced developers to discuss.
+
+
+    section#hobbies
+      header Hobbies
+      .content
+        .hobby
+          div
+            img(src='img/neovim.svg', alt='Neovim')
+          span.name Vim
+
+        .hobby
+          div
+            img(src='img/burger.svg', alt='Burger')
+          span.name Cook
+
+        .hobby
+          div
+            img(src='img/dumbbell.svg', alt='Dumbbell')
+          span.name Gym
+
+        .hobby
+          div
+            img(src='img/book.svg', alt='Book')
+          span.name Sci-Fi
+
+        .hobby
+          div
+            img(src='img/paddle.svg', alt='Paddle')
+          span.name Ping-Pong
+
+        .hobby
+          div
+            img(src='img/cross.svg', alt='Cross')
+          span.name Volunteer
+

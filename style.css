@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body {
+  font-family: "Source Sans Pro", "Open Sans", sans-serif;
+  font-size: 13px; }
+
+#paper {
+  width: 665px;
+  height: 1039.5px;
+  margin: 20px auto;
+  padding: 10px 35px; }
+  @media not print {
+    #paper {
+      box-shadow: 0 0 20px #dddddd;
+      border-radius: 3px; } }
+
+#name, section header {
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 1px; }
+
+#name {
+  font-size: 3em;
+  margin-top: 20px; }
+
+#name, #contact {
+  display: inline-block; }
+
+#contact {
+  color: #555555; }
+  #contact span:not(:last-child)::after {
+    content: "·";
+    margin-left: 4px;
+    margin-right: 1px; }
+  #contact #email {
+    font-size: 1.05em; }
+
+#face {
+  float: right;
+  margin-right: 10px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #f5f5f5; }
+
+hr {
+  border: none;
+  border-top: 1px solid #eeeeee; }
+  hr#top-separator {
+    margin: 35px 10px; }
+
+.link {
+  display: none;
+  font-size: 0.9em; }
+  .link a {
+    color: #032140; }
+
+section header {
+  font-size: 1.5em;
+  float: left;
+  width: 145px; }
+section .content {
+  margin-left: 145px; }
+section .entry {
+  margin: 15px 0; }
+section .content hr {
+  margin: 20px 5px; }
+section#skills li,
+section .description,
+section .interval {
+  color: #555555; }
+section .place,
+section .interval .length,
+section .interval .to.expected::after {
+  color: #7d7d7d; }
+section .role {
+  font-size: 1.3em;
+  margin-bottom: 10px; }
+section .place {
+  text-align: center; }
+  section .place::before {
+    content: "|";
+    margin-right: 4px;
+    margin-left: 1px; }
+section#work .place {
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+section#education .place {
+  font-variant: small-caps; }
+section .interval {
+  float: right; }
+  section .interval .from::after {
+    content: " —"; }
+  section .interval .length::before {
+    content: " ("; }
+  section .interval .length::after {
+    content: ")"; }
+  section .interval .to.expected::after {
+    content: " (expected)"; }
+  section .interval .length {
+    font-size: 0.9em; }
+section .description {
+  display: block; }
+section#skills, section #hobby {
+  display: table; }
+section#skills .category, section#hobbies .hobby {
+  display: table-cell; }
+section#skills .category {
+  width: 170px; }
+  section#skills .category .name {
+    font-size: 1.3em; }
+section#skills ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-bottom: 0; }
+section#projects .name {
+  font-size: 1.15em; }
+section#projects .link::before {
+  content: "— "; }
+section#hobbies {
+  margin-top: 40px; }
+  section#hobbies header {
+    padding-top: 10px; }
+  section#hobbies .hobby {
+    width: 150px;
+    text-align: center; }
+    section#hobbies .hobby img {
+      height: 25px;
+      opacity: 0.4; }
+
+/*# sourceMappingURL=style.css.map */
