@@ -52,7 +52,7 @@ hr {
     margin: 45px 10px; }
 
 a {
-  color: #333333; }
+  color: inherit; }
 
 section header {
   font-size: 1.5em;
