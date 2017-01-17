@@ -11,12 +11,12 @@ body {
     margin-right: auto;
     /*box-shadow: 0 0 20px #dddddd;*/
 
-    border-radius: 3px;
+    /*border-radius: 3px;*/
 
 
     padding-top: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
+    /*padding-left: 25px;*/
+    /*padding-right: 25px;*/
 }
 
 h1,
@@ -96,7 +96,7 @@ section#contact {
 }
 
 .entry {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 .role {
