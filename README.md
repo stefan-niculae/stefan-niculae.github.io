@@ -6,5 +6,7 @@ View online at [stefan1niculae.github.io](http://stefan1niculae.github.io).
 Compile `index.pug` with `pug` and `style.sass` with `sass`.
 
 Pdf version generated from Safari (10.0):
- - cmd-P
- - Save as PDF (in the lower left corner dropdown)
+ - `cmd-P`
+ - keep `page 1`
+ - check `Print Backgrounds`
+ - `Save as PDF` (in the lower left corner dropdown)
