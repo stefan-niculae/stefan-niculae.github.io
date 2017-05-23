@@ -18,11 +18,16 @@ body
     // TODO: js to update period
 
     section#contact
-      span#email stefan1niculae@gmail.com
-      span#phone 0040 722 740 469
-      span#location Bucharest, RO
-      // <span class="linkedin"><a href="https://www.linkedin.com/in/stefan1niculae">stefan1niculae</a></span>
-      // <span class="github"><a href="https://www.github.com/stefan1niculae">stefan1niculae</a></span>
+      div
+        span#phone +40 722 740 469
+        span#location Bucharest, Romania
+      div
+        span#email stefan1niculae@gmail.com
+        span#linkedin
+          a(href='https://www.linkedin.com/in/stefan1niculae') LinkedIn
+        span#github
+          a(href='https://www.github.com/stefan1niculae') GitHub
+
     hr#top-separator
 
 
@@ -30,32 +35,62 @@ body
       header Experience
       .content
 
-        #adobe.entry
+        #bitdefender.entry
+          .info
+            span.role Data Scientist
+            span.place Bitdefender
+            .description
+              ul
+                li Learn to detect suspicious patterns in user behaviour
           .interval
-            span.from March 2016
+            span.from May 2017
             span.to Present
-            span.length 11 months
-          span.role Data Science Intern
-          span.place Adobe
-          span.description Worked on a classifier for retention-impactful product features. Developed a predictor for user's next action in Adobe XD. Implemented a product recommender system for Adobe BC.
+
+        //#fmi-ta.entry
+        //  .interval
+        //    span.from October 2016
+        //    span.to Present
+        //  span.role Teaching Assistant
+        //  span.place University of Bucharest
+        //  span.description Held two laboratory classes for Undergraduate students: #[a(href='https://stefan1niculae.github.io/haskell-labs' title='Lab site') Declarative Programming] (third year) and #[a(href='https://stefan1niculae.github.io/formal-labs' title='Lab site') Formal Languages & Automata] (first year).
+
+        #adobe.entry
+          .info
+            span.role Data Science Intern
+            span.place Adobe
+            .description
+              ul
+                li Adobe XD: Researched a Deep Recurrent Network to predict next user action
+                li Adobe BC: Researched and implemented the product recommender
+          .interval
+            span.from Mar 2016
+            span.to Apr 2017
+            //span.length 1 year & 2 months
 
         #intel.entry
+          .info
+            span.role Performance Optimization Intern
+            span.place Intel
+            .description
+              ul
+                li Developed a dashboard for IoT performance statistics and spike-detection
           .interval
-            span.from June 2015
-            span.to Sept 2015
-            span.length 4 months
-          span.role Performance Optimization Intern
-          span.place Intel
-          span.description Developed a tool which processes IoT performance metrics and provides statistical insight in a visual way. Worked on a robust spike-detection algorithm.
+            span.from Jun 2015
+            span.to Sep 2015
+            //span.length 4 months
 
         #clu.entry
+          .info
+            span.role Mobile Game Developer
+            span.place Clu Games
+            .description
+              ul
+                li Created catchy one-button games: #[a(href='https://play.google.com/store/apps/details?id=com.jmg.pet' title='Installable game') Android example], #[a(href='https://itunes.apple.com/sg/app/nutcracker-finger-dash/id906391464' title='Installable game') iOS example]
           .interval
-            span.from July 2014
-            span.to April 2015
-            span.length 9 months
-          span.role Game Developer
-          span.place Clu Games
-          span.description Created catchy small-to-medium mobile games in Unity: #[a(href='https://play.google.com/store/apps/details?id=com.jmg.pet' title='Installable game') Android example], #[a(href='https://itunes.apple.com/sg/app/nutcracker-finger-dash/id906391464' title='Installable game') iOS example]
+            span.from Jul 2014
+            span.to Apr 2015
+            //span.length 9 months
+
         hr
 
 
@@ -64,24 +99,38 @@ body
       .content
 
         #masters.entry
+          .info
+            span.role Master's in Artificial Intelligence
+            span.place University of Bucharest
+            .description
+              ul
+                li Demos of the most #[a(href='https://github.com/stefan1niculae/school-projects' title='Screenshots & sources') interesting school projects]
+                li Teaching Assistant: #[a(href='https://stefan1niculae.github.io/haskell-labs' title='Lab site') Declarative Programming], #[a(href='https://stefan1niculae.github.io/formal-labs' title='Lab site') Formal Languages & Automata]
           .interval
             span.from 2016
             span.to.expected 2018
-          span.role Master's in Artificial Intelligence
-          span.place University of Bucharest
-          span.description Teaching Assistant for #[a(href='https://stefan1niculae.github.io/haskell-labs' title='Lab site') Declarative Programming] and #[a(href='https://stefan1niculae.github.io/formal-labs' title='Lab site') Formal Languages & Automata] classes.
 
         #bachelors.entry
+          .info
+            span.role Bachelor of Computer Science
+            span.place University of Bucharest
+            .description
+              ul
+                li Second-highest graduation grade, 9.9/10
+                li #[a(href='https://github.com/stefan1niculae/undergrad-thesis') Thesis]: Learn and select the most retention-impactful product features
+                li Organized Android Club as a Google Student Ambassador
+                li Completed three-year Psychopedagogy module
+                li Volunteer at #[i Association of Mathematics and Computer Science Students]
           .interval
             span.from 2013
             span.to 2016
-          span.role Bachelor of Computer Science
-          span.place University of Bucharest
-          span.description  Graduated with second highest grade, 9.8/10. Finished three-year Psychopedagogy module. Volunteered at the Student's Association, finance dept. #[a(href='https://github.com/stefan1niculae/school-projects' title='Screenshots & sources') Interesting projects]
 
         #trainings.entry
-          span.role Trainings
-          span.description Introductory for: user experience, public speaking, time management, leadership.
+          span.role Non-Formal Trainings
+          .description
+            ul
+              li #[span.inline-place Erasmus+] Intercultural Sensitivity (Cyprus 2017)
+              li #[span.inline-place Various] Introductive Leadership, Public Speaking, User Experience
         hr
 
 
@@ -92,27 +141,26 @@ body
         .category
           span.name Data Science
           ul
-            li Python
-            li Machine Learning
-            li Statistics
+            li SciPy Stack
+            li Tensorflow
+            li SQL
 
         .category
           span.name Web
           ul
-            li Django, Flask
+            li Django, .NET
             li React
-            li SQL
+            li Semantic UI
 
         .category
           span.name Other
           ul
-            li C#
+            li Shell
+            li Unity
             li Haskell
-            li Swift
         hr
 
-
-    section#projects
+    //section#projects
       header Personal Projects
       .content
 
@@ -134,6 +182,8 @@ body
         #gsa.entry
           span.name Google Student Ambassador
           span.description Android meetings for learning and discussing projects.
+
+        hr
 
 
     section#hobbies
@@ -166,15 +216,16 @@ body
 
         .hobby
           div
-            img(src='img/cross.svg', alt='Cross')
-          span.name Volunteer
+            img(src='img/travel.svg', alt='Globe')
+          span.name Travel
+
+
 
 
     #paper-footer
-      p Visit #[a(href='https://stefan1niculae.github.io' title='Online version of resume') stefan1niculae.github.io] to view the online version and access links to sources & screenshots.
+      p View online version: #[a(href='https://stefan1niculae.github.io' title='Online version of resume') stefan1niculae.github.io] to access links
 
   footer
-    p Download #[a(href='Stefan Niculae - Resume.pdf' title='1-page, printer-ready' download='Stefan Niculae - Resume.pdf' target='_blank') pdf] or view #[a(href='https://github.com/stefan1niculae/stefan1niculae.github.io') source].
-
+    p #[a(href='Stefan Niculae - Resume.pdf' title='1-page, printer-ready' download='Stefan Niculae - Resume.pdf' target='_blank') Download PDF]
 
   script#google-analytics (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q || []).push(arguments)}, i[r].l=1 * new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-90665479-1', 'auto');ga('send', 'pageview');

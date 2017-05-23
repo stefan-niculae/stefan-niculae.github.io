@@ -1,3 +1,5 @@
+@charset "utf-8"
+
 // Colors
 $black:         #333333
 $lighter-black: #555555
@@ -9,11 +11,11 @@ $lightest-gray: #f5f5f5
 $A4-width:  210px
 $A4-height: 297px
 $paper-scale: 3.5
-$paper-left-padding: 25px
-$paper-right-padding: 35px
+$paper-left-padding: 30px
+$paper-right-padding: 50px
 $paper-width: $A4-width  * $paper-scale - ($paper-left-padding + $paper-right-padding)
 $paper-height: $A4-height * $paper-scale
-$left-col-width: 150px
+$left-col-width: 120px
 
 
 
@@ -21,7 +23,7 @@ $left-col-width: 150px
 // Paper layout
 body
   font-family: "Source Sans Pro", "Open Sans", sans-serif
-  font-size: 13px
+  font-size: 14px
 
 
 #paper
@@ -51,19 +53,19 @@ body
 
 #name
   font-size: 3em
-  margin-top: 20px
+  margin-top: 10px
 
 #name, #contact
   display: inline-block
 
 #contact
   color: $lighter-black
+  div
+    margin-bottom: 2px
   span:not(:last-child)::after
     content: ' · '
     margin-left: 2px
     margin-right: 1px
-  #email
-    font-size: 1.05em // lowercase letters are small
 
 #face
   float: right
@@ -82,7 +84,7 @@ hr
   border: none
   border-top: 1px solid #eeeeee
   &#top-separator
-    margin: 45px 10px
+    margin: 28px 10px
 
 a
   color: inherit
@@ -96,17 +98,17 @@ a
 section
   // Spacing
   header
-    font-size: 1.5em
+    font-size: 1.2em
     float: left
     width: $left-col-width
   .content
     margin-left: $left-col-width
   .content hr
-    margin: 25px 5px
+    margin: 20px 5px
 
   &#work .entry,
   &#education .entry
-    margin: 25px 0
+    margin: 5px 0
 
 
   // Color
@@ -115,47 +117,79 @@ section
   .interval
     color: $lighter-black
 
+  .inline-place,
   .place,
   .interval .length,
   .interval .to.expected::after
     color: $light-gray
 
 
-  // Work & Education: top part
-  .role
-    font-size: 1.3em
-    margin-bottom: 10px
+  // Work & Education
+  .entry .info
+    display: inline-block
+    width: 470px
 
-  .place
-    text-align: center
-    &::before
-      content: ' | '
-      margin-left: 2px
-      margin-right: 2px
+  .entry .interval
+    text-transform: lowercase
+    font-size: .9em
+    color: #686868
+    span
+      display: block
+    border-left: 1px solid #ebebeb
+    display: inline-block
+    margin-top: 8px
+    padding-left: 7px
+    vertical-align: top
+    //span.from::after
+      content: ' -'
+
+  .role
+    font-size: 1.15em
+
   &#work .place  // company
     letter-spacing: 1px // "Adobe" and "Intel" are short names
     text-transform: uppercase
+  .inline-place,
+  &#work .place,
   &#education .place // school
     font-variant: small-caps
 
-  .interval
+  &#work .place,
+  &#education .place // school
+    &::before
+      content: ' · '
+      margin-left: 2px
+      margin-right: 2px
+
+  //.interval
     float: right
     .from::after
-      content: ' —'
+      content: ' — '
+    //.to.expected::after
+      content: ' (expected)' // show expected mention?
     .length
+      display: none // show nr months duration?
       &::before
         content: ' ('
       &::after
         content: ')'
-    .to.expected::after
-      //content: ' (expected)' // show expected mention?
-    .length
-      display: none // show nr months duration?
       font-size: .9em
 
   &#work .description,
   &#education .description
-    display: block
+    ul
+      margin-top: 0
+      padding-left: 5px
+      list-style: none
+      li:before
+        content: '›'
+        font-size: 1.25em
+        margin-right: .3em
+
+  #trainings
+    .inline-place
+      width: 70px
+      display: inline-block
 
   // Skills & Hobbies: layout
   &#skills, #hobby
@@ -170,14 +204,14 @@ section
       width: ($paper-width - $left-col-width) * .32 // HACK
       display: inline-block
       .name
-        font-size: 1.3em
+        font-size: 1.1em
     ul
       list-style-type: none
       padding-left: 0
       margin-top: 5px
       margin-bottom: 0
 
-  &#projects
+  //&#projects
     .name
       font-size: 1.15em
 
@@ -194,7 +228,7 @@ section
 
 
   &#hobbies
-    margin-top: 50px  // instead of <hr>
+    //margin-top: 50px  // instead of <hr>
     header
       padding-top: 7px  // "center" Hobbies text with icons and text in content
 
@@ -217,12 +251,13 @@ footer
   color: $lighter-gray
 
 #paper-footer
-  margin-top: 15px
-  font-size: .85em
-  @media not print
+  margin-top: 20px
+  @media not print  // development: comment this
     display: none
 
 footer
   font-size: 1.1em
+  padding-top: .7em
+  padding-bottom: 1em
   @media print
-    display: none // development: comment this
+    display: none
