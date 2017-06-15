@@ -1,5 +1,7 @@
 @charset "utf-8"
 
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro')
+
 // Colors
 $black:         #333333
 $lighter-black: #555555
@@ -63,10 +65,22 @@ body
   color: $lighter-black
   div
     margin-bottom: 2px
-  span:not(:last-child)::after
-    content: ' · '
-    margin-left: 2px
-    margin-right: 1px
+    &:first-child
+      span:not(:last-child)::after
+        content: ' · '
+        margin-left: 7px
+        margin-right: 6px
+
+  span:not(:first-child)
+    img
+      margin-left: 17px
+  img
+    //alignment-baseline: middle
+    margin-right: 7px
+    //margin-top: .1em
+    vertical-align: -10%
+    height: 1em
+    opacity: .65
 
 #face
   float: right
@@ -162,19 +176,6 @@ section
       margin-left: 2px
       margin-right: 2px
 
-  //.interval
-    float: right
-    .from::after
-      content: ' — '
-    //.to.expected::after
-      content: ' (expected)' // show expected mention?
-    .length
-      display: none // show nr months duration?
-      &::before
-        content: ' ('
-      &::after
-        content: ')'
-      font-size: .9em
 
   &#work .description,
   &#education .description

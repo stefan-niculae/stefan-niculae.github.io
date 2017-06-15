@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 body {
   font-family: "Source Sans Pro", "Open Sans", sans-serif;
   font-size: 14px; }
@@ -30,13 +31,21 @@ body {
   display: inline-block; }
 
 #contact {
+  display: block;
   color: #555555; }
   #contact div {
     margin-bottom: 2px; }
-  #contact span:not(:last-child)::after {
-    content: " · ";
-    margin-left: 2px;
-    margin-right: 1px; }
+    #contact div:first-child span:not(:last-child)::after {
+      content: " · ";
+      margin-left: 7px;
+      margin-right: 6px; }
+  #contact span:not(:first-child) img {
+    margin-left: 17px; }
+  #contact img {
+    margin-right: 7px;
+    vertical-align: -10%;
+    height: 1em;
+    opacity: 0.65; }
 
 #face {
   float: right;
