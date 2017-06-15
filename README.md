@@ -1,7 +1,7 @@
 # stefan1niculae.github.io
 My one page resume.
 
-View online at [stefan1niculae.github.io](http://stefan1niculae.github.io).
+View online at http://stefann.eu.
 
 Compile `index.pug` with `pug` and `style.sass` with `sass`.
 
