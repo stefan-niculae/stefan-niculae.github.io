@@ -1,20 +1,19 @@
 @insertEmail = ->
-  before  = 'hello'
-  after   = 'stefann.eu'
-  address = before + '@' + after
+  first = '&#104;&#101;&#108;&#108;&#1'
+  encoded = first + '11;&#064;&#115;&#116;&#101;&#102;&#097;&#110;&#110;&#046;&#101;&#117;'
 
-  encoded = '&#104;&#101;&#108;&#108;&#111;&#064;&#115;&#116;&#101;&#102;&#097;&#110;&#110;&#046;&#101;&#117;'
-  withBogus = encoded.substr(0, 18) + '<i>' + encoded.substr(18, 12) + '</i>' + encoded.substr(30)
+  withBogus = encoded.substr(0, 18) + '<i>' + encoded.substr(18, 24) + '</i>' + encoded.substr(42)
 
-  document.write '<a href="mai' + 'lto:' + address + '">' + withBogus + '</a>'
+  first = '<a href="mai'
+  document.write first + 'lto:' + encoded + '">' + withBogus + '</a>'
 
 
 @insertPhone = ->
-  groups = ['+40', '722', '740', '469']
-  number = groups.join '-'
+  groups = ['&#052;&#048;', '&#055;&#050;&#050;', '&#055;&#052;&#048;', '&#052;&#054;&#057;']
+  withDashes = groups.join '-'
 
-  encoded = '&#048;&#048;&#052;&#048;&#032;&#055;&#050;&#050;&#032;&#055;&#052;&#048;&#032;&#052;&#054;&#057;'
-  withBogus = encoded.substr(0, 18) + '<i>' + encoded.substr(18, 12) + '</i>' + encoded.substr(30)
+  withBlanks = groups.join ' '
+  withBogus = withBlanks.substr(0, 25) + '</i>' + withBlanks.substr(25)
 
-  document.write '<a href="tel:' + number + '">' + withBogus + '</a>'
-  
+  first = '<a href="t'
+  document.write first + 'el:+' + withDashes + '">0<i>0' + withBogus + '</a>'
