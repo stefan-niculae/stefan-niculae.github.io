@@ -10,3 +10,7 @@ Pdf version generated from Safari (10.0):
  - keep `page 1`
  - check `Print Backgrounds`
  - `Save as PDF` (in the lower left corner dropdown)
+
+
+TODO:
+ - js to update time periods

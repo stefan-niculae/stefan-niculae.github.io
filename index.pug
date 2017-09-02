@@ -7,20 +7,40 @@ html(lang='en')
     title Stefan Niculae - Resume
     meta(name='description' content='One-page resume of Stefan Niculae')
 
+    link(rel='apple-touch-icon', sizes='57x57', href='img/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='img/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='img/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='img/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='img/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='img/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='img/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='img/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='img/favicon/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='img/favicon/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='img/favicon/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='img/favicon/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+
     link(href='https://fonts.googleapis.com/css?family=Source+Sans+Pro', rel='stylesheet')
     link(rel='stylesheet', href='style.css')
+    script function insertEmail() { var address, after, before, encoded, withBogus; before = 'hello'; after = 'stefann.eu'; address = before + '@' + after; encoded = '&#104;&#101;&#108;&#108;&#111;&#064;&#115;&#116;&#101;&#102;&#097;&#110;&#110;&#046;&#101;&#117;'; withBogus = encoded.substr(0, 18) + '<i>' + encoded.substr(18, 12) + '</i>' + encoded.substr(30); document.write('<a href="mai' + 'lto:' + address + '">' + withBogus + '</a>'); }; function insertPhone() { var encoded, groups, number, withBogus; groups = ['+40', '722', '740', '469']; number = groups.join('-'); encoded = '&#048;&#048;&#052;&#048;&#032;&#055;&#050;&#050;&#032;&#055;&#052;&#048;&#032;&#052;&#054;&#057;'; withBogus = encoded.substr(0, 18) + '<i>' + encoded.substr(18, 12) + '</i>' + encoded.substr(30); document.write('<a href="tel:' + number + '">' + withBogus + '</a>'); }
 
 body
   #paper
 
     header#name Stefan Niculae
     img#face(src='img/face-bw.png', alt='My Picture')
-    // TODO: js to update period
 
     section#contact
       div
-        span#email hello@stefann.eu
-        span#phone 0040 722 740 469
+        span#email
+          script insertEmail()
+        span#phone
+          script insertPhone()
         span#location Bucharest
       div
         span#linkedin
@@ -48,14 +68,6 @@ body
             span.from May 2017
             span.to Present
 
-        //#fmi-ta.entry
-        //  .interval
-        //    span.from October 2016
-        //    span.to Present
-        //  span.role Teaching Assistant
-        //  span.place University of Bucharest
-        //  span.description Held two laboratory classes for Undergraduate students: #[a(href='https://stefan1niculae.github.io/haskell-labs' title='Lab site') Declarative Programming] (third year) and #[a(href='https://stefan1niculae.github.io/formal-labs' title='Lab site') Formal Languages & Automata] (first year).
-
         #adobe.entry
           .info
             span.role Data Science Intern
@@ -67,7 +79,6 @@ body
           .interval
             span.from Mar 2016
             span.to Apr 2017
-            //span.length 1 year & 2 months
 
         #intel.entry
           .info
@@ -79,7 +90,6 @@ body
           .interval
             span.from Jun 2015
             span.to Sep 2015
-            //span.length 4 months
 
         #clu.entry
           .info
@@ -91,7 +101,6 @@ body
           .interval
             span.from Jul 2014
             span.to Apr 2015
-            //span.length 9 months
 
         hr
 
