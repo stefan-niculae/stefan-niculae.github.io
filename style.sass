@@ -14,7 +14,7 @@ $A4-width:  210px
 $A4-height: 297px
 $paper-scale: 3.5
 $paper-left-padding: 30px
-$paper-right-padding: 50px
+$paper-right-padding: 40px
 $paper-width: $A4-width  * $paper-scale - ($paper-left-padding + $paper-right-padding)
 $paper-height: $A4-height * $paper-scale
 $left-col-width: 120px
@@ -31,7 +31,7 @@ body
 #paper
   width:  $paper-width
   //height: $paper-height // development: uncomment this
-  padding-bottom: 25px // development: comment this
+  padding-bottom: 30px // development: comment this
 
   margin-left: auto
   margin-right: auto
@@ -105,7 +105,7 @@ hr
   border: none
   border-top: 1px solid #eeeeee
   &#top-separator
-    margin: 28px 10px
+    margin: 25px 10px
 
 a
   color: inherit
@@ -148,7 +148,15 @@ section
   // Work & Education
   .entry .info
     display: inline-block
-    width: 470px
+    width: 480px
+
+  &#work hr
+    margin-top: 10px
+    margin-bottom: 25px
+
+  &#work hr,
+  &#education hr
+    margin-right: 20px
 
   .entry .interval
     text-transform: lowercase
@@ -208,11 +216,15 @@ section
     display: table-cell
 
   &#skills
+    .content
+      padding-left: 5px
     .category
       width: ($paper-width - $left-col-width) * .32 // HACK
       display: inline-block
       .name
         font-size: 1.1em
+    hr
+      margin-left: -5px
     ul
       list-style-type: none
       padding-left: 0
@@ -244,9 +256,10 @@ section
       display: flex
       justify-content: space-between
       padding-left: 10px
-      padding-right: 10px
+      padding-right: 40px
     .hobby
       text-align: center
+      font-size: .9em
       img
         height: 20px
         opacity: .35
@@ -259,7 +272,7 @@ footer
   color: $lighter-gray
 
 #paper-footer
-  margin-top: 20px
+  margin-top: 40px
   @media not print  // development: comment this
     display: none
 
