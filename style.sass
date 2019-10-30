@@ -1,92 +1,171 @@
-$small-screen: "(max-width: 480px)"
-$large-screen: "(min-width: 480px)"
+$small-screen: "(max-width: 550px)"
+$med-screen:   "(min-width: 551px) and (max-width: 960px)"
+$large-screen: "(min-width: 961px)"
+
+@font-face
+  font-family: Lato-Semibold
+  src: url("fonts/Lato-Semibold.ttf")
+@font-face
+  font-family: SourceSansPro-Regular
+  src: url("fonts/SourceSansPro-Regular.ttf")
 
 *
   margin: 0
   padding: 0
 
-// TODO mobile
-
 body
   background-color: #fcfcfc
   color: #222
-  margin: 10px
-
+  margin-left: 10px
+  margin-right: 10px
+  margin-bottom: 200px
 
 h1, h2
-  font-family: Lato, sans-serif
-  font-weight: bold
-  margin-bottom: 1rem
+  font-family: Lato-Semibold, sans-serif
+  //font-weight: 500   // TODO fix for safari
 
-h1
-  font-size: 3rem
-h2
-  font-size: 2rem
-
-h3, p, a, summary
-  font-family: 'Source Sans Pro', sans-serif
+h3, p, summary, #contact
+  font-family: SourceSansPro-Regular, sans-serif
   font-weight: normal
-  margin-bottom: .5rem
 
-a, summary, #email
+// Clickable elements
+#contact a, #email, summary
   color: #909090
-
-@media #{$small-screen}
-  .large-screen-only
-    display: none
-  h1
-    display: block
-    color: red
-@media #{$large-screen}
-  .small-screen-only
-    display: none
 
 
 #main-container
-  max-width: 900px
-  margin: 75px auto auto
+  max-width: 1000px
+  margin: auto
 
-#bio
-  display: block
+#intro
+  #bio p
+    margin-bottom: .5em
 
-#bio-inner-container
-  display: flex
-  margin-bottom: 100px
+img
+  border: 1px solid #ebebeb
 
-  #left
-    // TODO make the profile pic the same width as the first project column
-    width: 22%
+/* Intro layout */
+@media (min-width: 680px)  // bigger screen
+  $profile-pic-size: 260px  // it's square
+  $name-height: 60px
+  $contact-line-height: 20px
+
+  h1
+    font-size: 40px
+
+
+  #intro
+    display: grid
+    grid-template-columns: $profile-pic-size 1fr
+    grid-template-rows: $name-height ($profile-pic-size - $name-height - $contact-line-height) $contact-line-height
+    grid-column-gap: 3%
+
+    margin-top: 75px
+    margin-bottom: 100px
+
     img
-      width: 100%
-      border: 1px solid #ebebeb
-    #links a
-      margin-right: 15px
+      grid-column: 1
+      grid-row: 1/4
+      height: 95%
+      align-self: end
 
-  #right
-    flex: 1
-    vertical-align: top
-    margin-left: 50px
+    #name
+      grid-column: 2
+      grid-row: 1
+
+    #bio
+      grid-column: 2
+      grid-row: 2
+      max-width: 575px
+      vertical-align: top
+
+    #contact
+      grid-column: 2
+      grid-row: 3
+      br
+        display: none
+      a:not(:last-child)
+        margin-right: 20px
+
+
+@media (max-width: 681px)  // smaller screen
+  $name-height: 40px
+  $profile-pic-size: 25vw  // it's square
+  $contact-height: 50px
+
+  h1
+    font-size: 8.5vw
+
+  #intro
+    display: grid
+    grid-template-columns: $profile-pic-size 1fr
+    grid-template-rows: $name-height calc(#{$profile-pic-size} - #{$name-height}) 1fr
+    grid-column-gap: 20px
+
+    margin-top: 35px
+    margin-bottom: 3rem
+
+    img
+      grid-column: 1
+      grid-row: 1/3
+      height: 95%
+      align-self: end
+
+    #name
+      grid-column: 2
+      grid-row: 1/2
+
+    #contact
+      grid-column: 2
+      grid-row: 2/3
+      align-self: end
+
+      a:not(:last-child)
+        margin-right: 10px
+
+    #bio
+      grid-column: 1/3
+      grid-row: 3/4
+      padding-top: 1.5rem
+
+
 
 #projects
-  #items
+
+  h2
+    font-size: 30px
+    margin-top: 100px
+    margin-bottom: 2rem
+
+  .items
     display: grid
-    @media #{$small-screen}
+    @media (max-width: 550px)
       grid-template-columns: repeat(1, 1fr)
-    @media #{$large-screen}
+    @media (min-width: 551px) and (max-width: 960px)
+      grid-template-columns: repeat(2, 1fr)
+    @media (min-width: 961px)
       grid-template-columns: repeat(3, 1fr)
 
-    grid-column-gap: 5%
+    grid-column-gap: 3%
     grid-row-gap: 5rem
 
     article
-      .placeholder-pic
-        background: grey
-        width: 100%
-        height: 150px
-        margin-bottom: 20px
+      h3
+        font-size: 20px
+        margin-bottom: 10px
 
-      details #more-info-content
-        background-color: #eaeaea
-        padding-left: .5rem
-      summary
-        text-decoration: underline !important
+      img
+        width: 100%
+        margin-bottom: 5px
+
+      p
+        min-height: 7rem  // lines of text
+
+      details
+        margin-top: 7px
+        summary::after
+          content: "More info"
+
+        :not(:first-child)
+          background-color: #eaeaea
+          padding: 5px 15px

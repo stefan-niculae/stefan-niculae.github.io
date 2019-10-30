@@ -1,60 +1,228 @@
 doctype html
 html(lang='en')
   head
-    meta(charset='utf-8')
     title Stefan Niculae
     meta(name='description' content='Personal (academic) webpage of Stefan Niculae')
-    link(rel='stylesheet' href='style.css')
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width')
+
+
+  link(rel='stylesheet' href='style.css')
 
   body
     #main-container
+      section#intro
+        img#profile(src='img/profile.jpg' alt='Profile Picture')
+        h1#name Stefan Niculae
+        #bio
+          p Hello!
+          p I am a Fulbright scholar, currently in my second year of Master's in Intelligent Robotics, at the University of Southern California, in Los Angeles.
+          p My interests are Information Representation and Reinforcement Learning. Also Data Visualization, Human-Computer Interaction and Programming Languages.
+        #contact
+          a(href='https://linkedin.com/in/stefan-niculae') Linkedin
+          a(href='https://github.com/stefan-niculae') Github
+          a(href='#') Resume.pdf
+          br
+          span#email contact@stefann.eu
 
-      section#bio
-        .small-screen-only
-          h1 Stefan Niculae
-
-        .large-screen-only
-          #bio-inner-container
-            #left
-              img#profile(src='img/profile.jpg' alt='Profile Picture')
-              #links
-                a(href='https://linkedin.com/in/stefan-niculae') LinkedIn
-                a(href='https://github.com/stefan-niculae') GitHub
-                a(href='#') Resume
-              p#email contact@stefann.eu
-            #right
-              h1 Stefan Niculae
-              p Hello!
-              p I am a Fulbright scholar, currently in my second year of Master's in Intelligent Robotics, at the University of Southern California, in Los Angeles.
-              p My interests are Information Representation and Reinforcement Learning. Also Data Visualization, Human-Computer Interaction and Programming Languages.
 
       section#projects
         h2 Projects
 
-        #items
+        .items
           article
-            h3 Data Visualization workshop
-            .placeholder-pic
-            p.description Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
+            h3 Swearing and social media likes
+            img(src='img/swear.png')
+            p On Twitter, women swear less, but swearing while it's raining, on a Saturday can improve audience engagement. We also predict which and where a swear word would impact engagement the most; and counterfactually explore celebrity scenarios.
             details
-              summary More info
-              #more-info-content
-                p Authors
-                p Time
-                p Institution
-                p Links
+              summary
+              p Authors
+              p Time
+              p Institution
+              p Links
+
 
           article
-            h3 Data Visualization workshop
-            .placeholder-pic
-            p.description Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
+            h3 Patterns of Life tool
+            img(src='img/pol.png')
+            p Aggregate multiple sources of data to generate a filterable population density estimation to prevent civilian casualties.  Sponsored by the US Air Force and prototyped using the Lean startup methodology, focused on customer discovery.
+            details
+              summary
+
 
           article
-            h3 Data Visualization workshop
-            .placeholder-pic
-            p.description Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
+            h3 Transformer vs CNN encoders in RL
+            img(src='img/blizz.jpg')
+            p Especially in non-euclidian topologies, and settings with non-local interactions, transformer state preprocessors can perform better than Convolutional ones, due to their "global" perceptive field and permutation invariance.
+            details
+              summary
+
 
           article
+            h3 Learning to hack
+            img(src='img/cybersec.png')
+            p In game-theoretic model of an enterprise network penetration scenario, older Genetic Algorithm methods trade speed for robustness, compared to modern Reinforcement Learning techniques.
+            details
+              summary
+
+
+
+          article
+            h3 Detecting abnormal user behavior
+            img(src='img/anomaly.png')
+            p Behavior anomalies, indicative of a compromised endpoint, are detected by processing raw system events using stages of clustering, and other unsupervized learning techniques, sensitive to the time-based sequentiality of the events.
+            details
+              summary
+
+
+
+          article
+            h3 E-commerce recommender engine
+            img(src='img/shop.jpg')
+            p Product recommender for platforms having up to tens of thousands of products and customers, with up to daily updates of purchase behavior. Collaborative Filtering, SVD and online updates.
+            details
+              summary
+              p Work done while at Adobe
+              p Photo credits: Blake Wisz
+
+
+          article
+            h3 Finding features that drive retention
+            img(src='img/retention.png')
+            p Select which features of a software product make keep users coming back using an array of statistical and learning methods, and a meta-classifier aggregating multiple heterogenous models.
+            details
+              summary
+
+
+
+          article
+            h3 Biological cues for Game Flow
+            img(src='img/physio.png')
+            p Games strive to be challenging — neither boring nor frustrating. Physiological (heart-rate, skin temperature, etc) and emotional (through facial expressions) signals can be used to adapt a game's difficulty in response to the user.
+            details
+              summary
+
+
+        h2 Teaching
+
+        .items
+          article
             h3 Data Visualization workshop
-            .placeholder-pic
-            p.description Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
+            img(src='img/viz.png')
+            p Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
+            details
+              summary
+
+          article
+            h3 Formal methods lab
+            img(src='img/lfa.png')
+            p Various types of Finite Automata and exercises involving them and Formal Languages. Diagrams and step-by-step solutions to help students understand both the intuition and the implementation details, in C++.
+            details
+              summary
+
+
+          article
+            h3 Functional programming lab
+            img(src='img/haskell.png')
+            p Explanations and exercises for Declarative Programming concepts, taught in Haskell. Supplemental lab materials, for the students to reference during class or at home.
+            details
+              summary
+
+
+
+        h2 Older/smaller projects
+
+        .items
+          article
+            h3 Self-driving model car
+            img(src='img/car.jpg')
+            p What happens when you end up with an extra part when you're "done"? You redo weeks of assembling and hope it doesn't happen again. What do you do when you end up with a different extra part afterwards? Just hope it wasn't essential.
+            details
+              summary
+
+
+          article
+            h3 Smart Vim tutor
+            img(src='img/vim.png')
+            p Popularize the notorious Vim text editor. Tutorials gradually introduce and allow the practice of concepts, gamification aids motivation and smart hints subtly show how you could have done actions more efficiently.
+            details
+              summary
+
+
+          article
+            h3 Combining DQN extensions
+            img(src='img/rainbow.png')
+            p Putting together modern DQN techniques that target various aspects of the RL process. Benchmarked on a 2D environment from OpenAI's Gym.
+            details
+              summary
+
+
+          article
+            h3 Abstract Machine
+            img(src='img/execution.png')
+            p Syntactic parser for a custom grammar, with inspectable Abstract Syntax Tree, and evaluator for custom semantics offering step-by-step evaluation, for the program given as input.
+            details
+              summary
+
+
+          article
+            h3 Steganography demo
+            img(src='img/stegano.jpg')
+            p An area of cryptography, stegano, deals with hiding information in plain sight: from tattooing a secret on a messenger's scalp and letting the hair grow, to the kerning of letters, or encoding an image into the least significant bits of another.
+            details
+              summary
+
+          article
+            h3 Image completion
+            img(src='img/inpaint.jpg')
+            p Pure signal processing (no learning) method for inpainting — filling missing areas of an image through texture synthesis. Used for object removal, photo restoration, picture expansion.
+            details
+              summary
+
+          article
+            h3 Evolving a network to flap
+            img(src='img/flap.png')
+            p Browser implementation of a flappy-bird-like game, neural network and Genetic Algorithm optimizer that uses selection, mutation and crossover to breed the fittest (reaching highest score) genomes.
+            details
+              summary
+
+
+          article
+            h3 Multiplayer tank game
+            img(src='img/tanks.jpg')
+            p "Fire Tracks!" is an online game in which you face off against three other tanks and chase, shoot each-other and make use of your special abilities in a bright, cartoony mayhem.
+            details
+              summary
+
+
+          article
+            h3 Parallel training for Neural Networks
+            img(src='img/mnist.png')
+            p C++ implementation of feedforward network and optimizer, with MPI parallelism on CPU. Demo on handwritten digit classification, with an interactive front-end for drawing the digit yourself.
+            details
+              summary
+
+
+          article
+            h3 Information Retrieval explainer
+            img(src='img/retrieval.png')
+            p Textual search engine that highlighting why certain documents and terms were selected, featuring stemming, stop-word removal and accented letters conversion.
+            details
+              summary
+
+
+          article
+            h3 Adventures of the modern man
+            img(src='img/man.png')
+            p Survive as long as you can by juggling your attention between working out (hitting the green spot), making money (move wallet left-right), hit the balls (move foot up-down) and maintaining the correct speed (press pedal).
+            details
+              summary
+
+
+          article
+            h3 IoT performance dashboard
+            img(src='img/iot.jpg')
+            p Visualize various performance metrics for Internet of Things devices and spike-detection algorithm to prevent running in a hazardous state.
+            details
+              summary
+
