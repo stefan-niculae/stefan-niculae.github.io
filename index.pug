@@ -10,9 +10,6 @@ html(lang='en')
     link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
     link(rel='manifest' href='img/favicon/site.webmanifest')
 
-    // TODO resume
-
-
   link(rel='stylesheet' href='style.css')
 
   body
@@ -27,7 +24,7 @@ html(lang='en')
         #contact
           a(href='https://linkedin.com/in/stefan-niculae') Linkedin
           a(href='https://github.com/stefan-niculae') Github
-          a(href='#') Resume.pdf
+          a(href='Stefan Niculae - Resume.pdf') Resume (pdf)
           br
           span#email contact@stefann.eu
 
@@ -78,6 +75,17 @@ html(lang='en')
         // TODO links
 
         .items
+          article
+            h3 Intervening in co-evolution
+            img(src='img/coev.png')
+            p In a zero-sum RL game, learning stagnates when one side overpowers the other. To resume a balanced co-evolution, we hinder the winner's decision making process and/or help the loser by providing it external guidance.
+            details
+              summary
+              p Class project for #[i Deep Learning], at the University of Southern California
+              p Team: #[strong Stefan Niculae], Alejandro Marin-Parra, Daniel Paul, Allen Kim, Abel John
+              a(href='#') Code
+              //a(href='#') Blog
+
           article
             h3 Transformer vs CNN encoders in RL
             img(src='img/blizz.jpg')
@@ -176,17 +184,6 @@ html(lang='en')
         h2 In progress
 
         .items
-          article
-            h3 Intervening in coevolution
-            img(src='img/coev.png')
-            p In a zero-sum RL game, especially when sides have asymmetric objectives, one side can overpower the other. To allow them to grow together, we hinder the winner, by injecting noise ito its decision making, and/or help the loser by providing it external guidance for exploration.
-            details
-              summary
-              p Class project for #[i Deep Learning], at the University of Southern California
-              p Team: #[strong Stefan Niculae], Daniel Paul, Alejandro Marin-Parra, Allen Kim, Abel John
-              a(href='#') Code
-              //a(href='#') Blog
-
           article
             h3 Thoughts-inspired art
             img(src='img/brain.jpg')
