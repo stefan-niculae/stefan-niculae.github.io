@@ -203,8 +203,8 @@ img {
   margin-bottom: 5px;
 }
 #projects .items article details {
-  margin-top: 7px;
   background-color: #f1f1f1;
+  margin: 7px 3px 18px 1px;
 }
 #projects .items article details summary {
   background-color: #fcfcfc;
@@ -215,8 +215,17 @@ img {
 #projects .items article details :not(:first-child) {
   padding: 5px 10px;
 }
-#projects .items article details a {
-  color: #222;
+#projects .items article a {
+  color: #909090;
+  border: 1px solid #909090;
+  border-radius: 4px;
+  padding: 4px 8px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+#projects .items article a:hover {
+  color: black;
+  border-color: black;
 }
 
 footer {

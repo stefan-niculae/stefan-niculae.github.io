@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
   head
     title Stefan Niculae
-    meta(name='description' content='Personal (academic) webpage of Stefan Niculae')
+    meta(name='description' content='Personal webpage of Stefan Niculae')
     meta(charset='utf-8')
     meta(name='viewport' content='width=device-width')
     link(rel='apple-touch-icon' sizes='180x180' href='img/favicon/apple-touch-icon.png')
@@ -22,10 +22,9 @@ html(lang='en')
           p I am a Fulbright scholar, currently in my second year of Master's in Intelligent Robotics, at the University of Southern California, in Los Angeles.
           p My interests are Information Representation and Reinforcement Learning. Also Data Visualization, Human-Computer Interaction and Programming Languages.
         #contact
-          a(href='https://linkedin.com/in/stefan-niculae') Linkedin
-          a(href='https://github.com/stefan-niculae') Github
-          a(href='Stefan Niculae - Resume.pdf') Resume (pdf)
-          br
+          a(href='https://linkedin.com/in/stefan-niculae' target='_blank') Linkedin
+          a(href='https://github.com/stefan-niculae' target='_blank') Github
+          a(href='files/Stefan Niculae - Resume.pdf' target='_blank') Resume (pdf)
           span#email contact@stefann.eu
 
       section#background
@@ -72,7 +71,6 @@ html(lang='en')
 
       section#projects
         h2 Projects
-        // TODO links
 
         .items
           article
@@ -81,10 +79,10 @@ html(lang='en')
             p In a zero-sum RL game, learning stagnates when one side overpowers the other. To resume a balanced co-evolution, we hinder the winner's decision making process and/or help the loser by providing it external guidance.
             details
               summary
-              p Class project for #[i Deep Learning], at the University of Southern California
-              p Team: #[strong Stefan Niculae], Alejandro Marin-Parra, Daniel Paul, Allen Kim, Abel John
-              a(href='#') Code
-              //a(href='#') Blog
+              p Class project for #[i Deep Learning], at USC
+              p Team: #[strong Stefan Niculae], Alejandro Marin-Parra, Daniel Paul Pena, Allen Kim, Abel John
+            a(href='https://docs.google.com/presentation/d/15h6Y2-9z8D5KjHKlFErx_rsckPDSoI42xj4B3SkkwIQ' target='_blank') Slides
+            a(href='/intervening-in-coevolution' target='_blank') Blog
 
           article
             h3 Transformer vs CNN encoders in RL
@@ -94,9 +92,6 @@ html(lang='en')
               summary
               p Summer project at Blizzard
               p Mentor: Wayne Yang
-              p
-                i Photo credit: Maik Jonietz
-
 
           article
             h3 Swearing and social media likes
@@ -104,11 +99,9 @@ html(lang='en')
             p On Twitter, women swear less, but swearing while it's raining, on a Saturday can improve audience engagement. We also predict which and where a swear word would impact engagement the most; and counterfactually explore celebrity scenarios.
             details
               summary
-              p Class project for #[i Data Science for Social Systems], at the University of Southern California
+              p Class project for #[i Data Science for Social Systems] at USC
               p Team: #[strong Stefan Niculae], Kendall Crouch, Jeffrey Stone, Santiago Carvajal, Timothy Rhodes
-              a(href='#') Poster
-              a(href='#') Code
-
+            a(href='files/Swearing impact on social media engagement.pdf' target='_blank') Poster
 
           article
             h3 Biological cues for Game Flow
@@ -118,10 +111,7 @@ html(lang='en')
               summary
               p Class project for #[i Affective Computing] at USC
               p Authors: #[strong Stefan Niculae], Shao-Yen Tseng, Dillion Knox, Qinyi Liu
-              a(href='#') Slides
-              a(href='#') Demo
-              a(href='#') Code
-
+            a(href='files/Physiological and Emotional Signals for Better Game Flow.pdf' target='_blank') Slides
 
           article
             h3 Patterns of Life tool
@@ -131,8 +121,7 @@ html(lang='en')
               summary
               p Class project for #[i Hacking for Defense], at USC
               p Team: #[strong Stefan Niculae], Brandon Wexler, Madhuri Jujare, Dubem Chukunwoji, Lauren Becker
-              a(href='#') Demo
-              a(href='#') Slides
+            a(href='files/Patterns of Life.pdf' target='_blank') Slides
 
           article
             h3 Learning to hack
@@ -144,20 +133,20 @@ html(lang='en')
               p Thesis advisor: Marius Popescu (Univ. Bucharest)
               p Paper version accepted at AAMAS 2019 workshop
               p Authors: #[strong Stefan Niculae], Daniel Dichiu and Razvan Prejbeanu (Bitdefender), Kaifeng Yang and Thomas Back (Leiden Univ.)
-              a(href='#') Paper
-              a(href='#') Thesis
+            a(href='files/RL vs GA in GT Cybersec Presentation.pdf' target='_blank') Slides
+            a(href='files/Automating Penetration Testing using Reinforcement Learning.pdf' target='_blank') Paper
+            a(href='files/RL vs GA in GT Cybersec Thesis.pdf' target='_blank') Thesis
 
 
           article
             h3 Detecting abnormal user behavior
-            img(src='img/anomaly.png')
+            img(src='img/bitdefender.jpg')
             p Behavior anomalies, indicative of a compromised endpoint, are detected by processing raw system events using stages of clustering, and other unsupervized learning techniques, sensitive to the time-based sequentiality of the events.
             details
               summary
               p Developed while at Bitdefender
+              p US Patent Pending
               p Authors: Daniel Dichiu, #[strong Stefan Niculae], Elena Bosinceanu, Sorina Stoian, Andreea Dincu, Andrei Apostoae
-              a(href='#') Patent
-
 
           article
             h3 Finding features that drive retention
@@ -168,18 +157,16 @@ html(lang='en')
               p Bachelor's thesis, in collaboration with Adobe
               p Thesis advisor: Traian Serbanuta (Univ. Bucharest)
               p Technical lead: Paul Chirita (Adobe)
-              a(href='#') Thesis
+            a(href='files/Finding features that drive retention.pdf' target='_blank') Thesis
 
 
           article
             h3 E-commerce recommender engine
-            img(src='img/shop.jpg')
+            img(src='img/adobe.png')
             p Product recommender for platforms having up to tens of thousands of products and customers, with up to daily updates of purchase behavior. Collaborative Filtering, SVD and online updates.
             details
               summary
               p Work done while at Adobe
-              p
-                i Photo credits: Blake Wisz
 
         h2 In progress
 
@@ -190,12 +177,8 @@ html(lang='en')
             p Generate VR art from signal obtained by dry-measurements of brainwaves
             details
               summary
-              p Project at the Ahmanson Lab, at the University of Southern California
+              p Project at the Ahmanson Lab, at the USC
               p Team: Garett Flynn, Samir Ghosh, #[strong Stefan Niculae], Fabian Dietrich
-              //a(href='#') Code
-              //a(href='#') Showcase
-              p
-                i Photo from: Refik Anadol
 
 
         h2 Teaching
@@ -207,8 +190,9 @@ html(lang='en')
             p Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
             details
               summary
-              p Presented to a cohort of 30 faculty and students at the University of Southern California
-              a(href='#') Notebooks
+              p Presented to a cohort of 30 faculty and students at USC
+            a(href='/viz-workshop' target='_blank') Notebooks
+            a(href='files/Data Viz Workshops.pdf' target='_blank') Flyer
 
           article
             h3 Formal methods lab
@@ -216,9 +200,9 @@ html(lang='en')
             p Various types of Finite Automata and exercises involving them and Formal Languages. Diagrams and step-by-step solutions to help students understand both the intuition and the implementation details, in C++.
             details
               summary
-              p Taught two classes of 30 first-year CS students, at the University of Bucharest
+              p Taught two classes of 30 first-year CS students, at U. Bucharest
               p Professor: Adrian Paun
-              a(href='/formal-labs') Website
+            a(href='/formal-labs') Website
 
 
           article
@@ -227,9 +211,9 @@ html(lang='en')
             p Explanations and exercises for Declarative Programming concepts, taught in Haskell. Supplemental lab materials, for the students to reference during class or at home.
             details
               summary
-              p Taught a class of 25 terminal-year CS students, at the University of Bucharest
+              p Taught a class of 25 terminal-year CS students, at U. Bucharest
               p Professor: Traian Serbanuta
-              a(href='/haskell-labs') Website
+            a(href='/haskell-labs' target='_blank') Website
 
 
         h2 Older/smaller projects
@@ -241,9 +225,8 @@ html(lang='en')
             p What happens when you end up with an extra part when you're "done"? You redo weeks of assembling and hope it doesn't happen again. What do you do when you end up with a different extra part afterwards? Just hope it wasn't essential.
             details
               summary
-              p For the #[i Race-on] competition, at the University of Southern California
+              p For the #[i Race-on] competition, at USC
               p Team: #[strong Stefan Niculae], Alejandro Marin-Parra, Philipp Schauer, Adeem Abass
-              a(href='/haskell-labs') Code
 
 
           article
@@ -253,8 +236,7 @@ html(lang='en')
             details
               summary
               p Class project for #[i Reinforcement Learning], at Leiden University
-              a(href='#') Report
-              a(href='#') Code
+            a(href='files/Combining DQN extensions.pdf' target='_blank') Report
 
 
           article
@@ -263,21 +245,19 @@ html(lang='en')
             p Browser implementation of a flappy-bird-like game, neural network and Genetic Algorithm optimizer that uses selection, mutation and crossover to breed the fittest (reaching highest score) genomes.
             details
               summary
-              p Class project for #[i Soft Computing], at the University of Bucharest
-              a(href='#') Slides
-              a(href='#') Code
+              p Class project for #[i Soft Computing], at U. Bucharest
+            a(href='/flappy-learn' target='_blank') Demo
+            a(href='#' target='_blank') Slides
 
 
           article
             h3 IoT performance dashboard
-            img(src='img/iot.jpg')
+            img(src='img/intel.png')
             p Visualize various performance metrics for Internet of Things devices and spike-detection algorithm to prevent running in a hazardous state.
             details
               summary
               p Summer project at Intel
               p Team leads: Cristian Levcovici, Mircea Bardac
-              p
-                i Photo credits: Louis Reed
 
 
           article
@@ -286,9 +266,8 @@ html(lang='en')
             p Pure signal processing (no learning) method for inpainting — filling missing areas of an image through texture synthesis. Used for object removal, photo restoration, picture expansion.
             details
               summary
-              p Class project for #[i Digital Signal Processing], at the University of Bucharest
-              a(href='#') Slides
-              a(href='#') Code
+              p Class project for #[i Digital Signal Processing], at U. Bucharest
+            a(href='files/Image completion.pdf' target='_blank') Slides
 
 
           article
@@ -297,9 +276,8 @@ html(lang='en')
             p Syntactic parser for a custom grammar, with inspectable Abstract Syntax Tree, and evaluator for custom semantics offering step-by-step evaluation, for the program given as input.
             details
               summary
-              p Class project for #[i Programming Languages Semantics], at the University of Bucharest
-              a(href='#') Demo
-              a(href='#') Code
+              p Class project for #[i Programming Languages Semantics], at U. Bucharest
+            a(href='/abstract-machine' target='_blank') Demo
 
 
           article
@@ -308,9 +286,8 @@ html(lang='en')
             p C++ implementation of feedforward network and optimizer, with MPI parallelism on CPU. Demo on handwritten digit classification, with an interactive front-end for drawing the digit yourself.
             details
               summary
-              p Class project for #[i Parallel Computing], at the University of Bucharest
+              p Class project for #[i Parallel Computing], at U. Bucharest
               p Team: #[strong Stefan Niculae], Ionut Ciocoiu
-              a(href='#') Code
 
 
           article
@@ -319,10 +296,9 @@ html(lang='en')
             p An area of cryptography, stegano, deals with hiding information in plain sight: from tattooing a secret on a messenger's scalp and letting the hair grow, to the kerning of letters, or encoding an image into the least significant bits of another.
             details
               summary
-              p Class project for #[i Applied Cryptography], at the University of Bucharest
+              p Class project for #[i Applied Cryptography], at U. Bucharest
               p Authors: #[strong Stefan Niculae], Alexandra Voda
-              a(href='#') Slides
-              a(href='#') Code
+            a(href='files/Steganography.pdf' target='_blank') Slides
 
 
           article
@@ -331,8 +307,7 @@ html(lang='en')
             p Textual search engine that highlighting why certain documents and terms were selected, featuring stemming, stop-word removal and accented letters conversion.
             details
               summary
-              p Class project for #[i Information Retrieval], at the University of Bucharest
-              a(href='#') Code
+              p Class project for #[i Information Retrieval], at U. Bucharest
 
 
           article
@@ -341,10 +316,9 @@ html(lang='en')
             p "Fire Tracks!" is an online game in which you face off against three other tanks and chase, shoot each-other and make use of your special abilities in a bright, cartoony mayhem.
             details
               summary
-              p Class project for #[i Software Development Methodologies], at the University of Bucharest
+              p Class project for #[i Software Development Methodologies], at U. Bucharest
               p Team: #[strong Stefan Niculae], Adrian Brojbeanu, Hung Trinh Xuan
-              a(href='#') Slides
-              a(href='#') Code
+            a(href='#') Slides
 
 
           article
@@ -353,10 +327,8 @@ html(lang='en')
             p Survive as long as you can by juggling your attention between working out (hitting the green spot), making money (move wallet left-right), hit the balls (move foot up-down) and maintaining the correct speed (press pedal).
             details
               summary
-              a(href='#') First place Microsoft hackathon winner (2015)
-              a(href='#') Team: #[strong Stefan Niculae], Hung Trinh Xuan
-              a(href='#') Demo
-              a(href='#') Code
+              p First place Microsoft hackathon winner (2015)
+              p Team: #[strong Stefan Niculae], Hung Trinh Xuan
 
 
           article
@@ -365,9 +337,8 @@ html(lang='en')
             p Popularize the notorious Vim text editor. Tutorials gradually introduce and allow the practice of concepts, gamification aids motivation and smart hints subtly show how you could have done actions more efficiently.
             details
               summary
-              p Class project for #[i Software Engineering], at the University of Bucharest
+              p Class project for #[i Software Engineering], at U. Bucharest
               p Team: #[strong Stefan Niculae], Catalin Matei, Razvan Balint, Ionut Popa, Crosman Vlad
-              a(href='#') Slides
-              a(href='#') Code
+            a(href='#') Slides
 
-      footer Thank you for visiting! I'd be happy to discuss anything that caught your interest.
+      footer Thank you for visiting! I'd be happy to discuss about anything that caught your interest.

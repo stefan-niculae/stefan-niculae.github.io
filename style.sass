@@ -200,8 +200,8 @@ $grid-column-gap: 3%
 
 
       details
-        margin-top: 7px
         background-color: $lighter-grey
+        margin: 7px 3px 18px 1px
 
         summary
           background-color: $off-white
@@ -211,9 +211,17 @@ $grid-column-gap: 3%
         :not(:first-child)
           padding: 5px 10px
 
-        a
-          color: $off-black
-        // TODO margin bottom
+      a
+        color: $grey
+        border: 1px solid $grey
+        border-radius: 4px
+        padding: 4px 8px
+        text-decoration: none
+        margin-right: 10px
+
+      a:hover
+        color: black
+        border-color: black
 
 
 footer
