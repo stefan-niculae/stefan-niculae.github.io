@@ -25,7 +25,9 @@ html(lang='en')
     link(rel='icon' type='image/png' sizes='16x16' href='img/favicon/favicon-16x16.png')
     link(rel='manifest' href='img/favicon/site.webmanifest')
 
-  link(rel='stylesheet' href='style.css')
+    style
+      include style.min.css
+  //link(rel='stylesheet' href='style.min.css')
 
   body
     #main-container
@@ -110,7 +112,7 @@ html(lang='en')
 
           article
             h3 Swearing and social media likes
-            img(src='img/swear.png')
+            img(src='img/swear.jpg')
             p On Twitter, women swear less, but swearing while it's raining, on a Saturday can improve audience engagement. We also predict which and where a swear word would impact engagement the most; and counterfactually explore celebrity scenarios.
             details
               summary
@@ -120,7 +122,7 @@ html(lang='en')
 
           article
             h3 Biological cues for Game Flow
-            img(src='img/physio.png')
+            img(src='img/physio.jpg')
             p Games strive to be challenging — neither boring nor frustrating. Physiological (heart-rate, skin temperature, etc) and emotional (through facial expressions) signals can be used to adapt a game's difficulty in response to the user.
             details
               summary
@@ -130,7 +132,7 @@ html(lang='en')
 
           article
             h3 Patterns of Life tool
-            img(src='img/pol.png')
+            img(src='img/pol.jpg')
             p Aggregate multiple sources of data to generate a filterable population density estimation to prevent civilian casualties.  Sponsored by the US Air Force and prototyped using the Lean startup methodology, focused on customer discovery.
             details
               summary
@@ -140,7 +142,7 @@ html(lang='en')
 
           article
             h3 Learning to hack
-            img(src='img/cybersec.png')
+            img(src='img/cybersec.jpg')
             p In a game-theoretic model of enterprise network penetration scenarios, older Genetic Algorithm methods trade speed for robustness, compared to modern Reinforcement Learning techniques.
             details
               summary
@@ -165,7 +167,7 @@ html(lang='en')
 
           article
             h3 Finding features that drive retention
-            img(src='img/retention.png')
+            img(src='img/retention.jpg')
             p Select which features of a software product make keep users coming back using an array of statistical and learning methods, and a meta-classifier aggregating multiple heterogenous models.
             details
               summary
@@ -201,7 +203,7 @@ html(lang='en')
         .items
           article
             h3 Data Visualization workshop
-            img(src='img/viz.png')
+            img(src='img/viz.jpg')
             p Python basics and the Jupyter environment; data wrangling using Numpy and Pandas; Data Visualization principles, best practices and case studies, illustrated using Matplotlib and Seaborn.
             details
               summary
@@ -211,7 +213,7 @@ html(lang='en')
 
           article
             h3 Formal methods lab
-            img(src='img/lfa.png')
+            img(src='img/lfa.jpg')
             p Various types of Finite Automata and exercises involving them and Formal Languages. Diagrams and step-by-step solutions to help students understand both the intuition and the implementation details, in C++.
             details
               summary
@@ -222,7 +224,7 @@ html(lang='en')
 
           article
             h3 Functional programming lab
-            img(src='img/haskell.png')
+            img(src='img/haskell.jpg')
             p Explanations and exercises for Declarative Programming concepts, taught in Haskell. Supplemental lab materials, for the students to reference during class or at home.
             details
               summary
@@ -246,7 +248,7 @@ html(lang='en')
 
           article
             h3 Combining DQN extensions
-            img(src='img/rainbow.png')
+            img(src='img/rainbow.jpg')
             p Putting together modern DQN techniques that target various aspects of the RL process. Benchmarked on a 2D environment from OpenAI's Gym.
             details
               summary
@@ -256,7 +258,7 @@ html(lang='en')
 
           article
             h3 Evolving a network to flap
-            img(src='img/flap.png')
+            img(src='img/flap.jpg')
             p Browser implementation of a flappy-bird-like game, neural network and Genetic Algorithm optimizer that uses selection, mutation and crossover to breed the fittest (reaching highest score) genomes.
             details
               summary
@@ -267,7 +269,7 @@ html(lang='en')
 
           article
             h3 IoT performance dashboard
-            img(src='img/intel.png')
+            img(src='img/intel.jpg')
             p Visualize various performance metrics for Internet of Things devices and spike-detection algorithm to prevent running in a hazardous state.
             details
               summary
@@ -297,7 +299,7 @@ html(lang='en')
 
           article
             h3 Parallel training for Neural Networks
-            img(src='img/mnist.png')
+            img(src='img/mnist.jpg')
             p C++ implementation of feedforward network and optimizer, with MPI parallelism on CPU. Demo on handwritten digit classification, with an interactive front-end for drawing the digit yourself.
             details
               summary
@@ -318,7 +320,7 @@ html(lang='en')
 
           article
             h3 Information Retrieval explainer
-            img(src='img/retrieval.png')
+            img(src='img/retrieval.jpg')
             p Textual search engine that highlighting why certain documents and terms were selected, featuring stemming, stop-word removal and accented letters conversion.
             details
               summary
@@ -338,7 +340,7 @@ html(lang='en')
 
           article
             h3 Adventures of the modern man
-            img(src='img/man.png')
+            img(src='img/man.jpg')
             p Survive as long as you can by juggling your attention between working out (hitting the green spot), making money (move wallet left-right), hit the balls (move foot up-down) and maintaining the correct speed (press pedal).
             details
               summary
@@ -348,7 +350,7 @@ html(lang='en')
 
           article
             h3 Smart Vim tutor
-            img(src='img/vim.png')
+            img(src='img/vim.jpg')
             p Popularize the notorious Vim text editor. Tutorials gradually introduce and allow the practice of concepts, gamification aids motivation and smart hints subtly show how you could have done actions more efficiently.
             details
               summary
