@@ -42,7 +42,7 @@ h2 {
 }
 
 a, #email, summary, footer {
-  color: #909090;
+  color: #787878;
 }
 
 #main-container {
@@ -64,7 +64,7 @@ picture img {
 }
 
 /* Intro layout */
-@media (min-width: 680px) {
+@media (min-width: 810px) {
   h1 {
     font-size: 40px;
   }
@@ -72,7 +72,7 @@ picture img {
   #intro {
     display: grid;
     grid-template-columns: 260px 1fr;
-    grid-template-rows: 60px 180px 20px;
+    grid-template-rows: 60px 155px 25px 20px;
     grid-column-gap: 3%;
     margin-top: 75px;
   }
@@ -92,50 +92,56 @@ picture img {
     max-width: 575px;
     vertical-align: top;
   }
-  #intro #contact {
+  #intro #links {
     grid-column: 2;
     grid-row: 3;
   }
-  #intro #contact br {
-    display: none;
-  }
-  #intro #contact a:not(:last-child) {
+  #intro #links a:not(:last-child) {
     margin-right: 20px;
   }
+  #intro #email {
+    grid-column: 2;
+    grid-row: 4;
+  }
 }
-@media (max-width: 681px) {
+@media (max-width: 810px) {
   h1 {
-    font-size: 8.5vw;
+    font-size: 7vw;
   }
 
   #intro {
     display: grid;
-    grid-template-columns: 25vw 1fr;
-    grid-template-rows: 40px calc(25vw - 40px) 1fr;
+    grid-template-columns: 30vw 1fr;
+    grid-template-rows: 40px calc(30vw - 40px - 20px) 20px 1fr;
     grid-column-gap: 20px;
     margin-top: 35px;
   }
   #intro picture {
     grid-column: 1;
-    grid-row: 1/3;
+    grid-row: 1/4;
     height: 95%;
     align-self: end;
   }
   #intro #name {
     grid-column: 2;
-    grid-row: 1/2;
+    grid-row: 1;
   }
-  #intro #contact {
+  #intro #links {
     grid-column: 2;
-    grid-row: 2/3;
+    grid-row: 2;
     align-self: end;
+    padding-bottom: 5px;
   }
-  #intro #contact a:not(:last-child) {
+  #intro #links a:not(:last-child) {
     margin-right: 10px;
+  }
+  #intro #email {
+    grid-column: 2;
+    grid-row: 3;
   }
   #intro #bio {
     grid-column: 1/3;
-    grid-row: 3/4;
+    grid-row: 4;
     padding-top: 1.5rem;
   }
 }
@@ -178,7 +184,7 @@ picture img {
   margin-top: 1.5rem;
 }
 #background .places .place {
-  color: #909090;
+  color: #787878;
 }
 
 /* Projects */
@@ -229,8 +235,8 @@ picture img {
   padding: 5px 10px;
 }
 #projects .items article a {
-  color: #909090;
-  border: 1px solid #909090;
+  color: #787878;
+  border: 1px solid #787878;
   border-radius: 4px;
   padding: 4px 8px;
   text-decoration: none;

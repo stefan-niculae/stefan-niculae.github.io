@@ -21,7 +21,7 @@
 $off-white: #fcfcfc
 $lighter-grey: #f1f1f1
 $light-grey: #ebebeb
-$grey: #909090
+$grey: #787878
 $off-black: #222
 
 
@@ -64,19 +64,19 @@ picture img
   object-fit: cover
 
 /* Intro layout */
-@media (min-width: 680px)  // bigger screen
+@media (min-width: 810px)  // bigger screen
   $profile-pic-size: 260px  // it's square
   $name-height: 60px
-  $contact-line-height: 20px
+  $links-height: 25px
+  $email-height: 20px
 
   h1
     font-size: 40px
 
-
   #intro
     display: grid
     grid-template-columns: $profile-pic-size 1fr
-    grid-template-rows: $name-height ($profile-pic-size - $name-height - $contact-line-height) $contact-line-height
+    grid-template-rows: $name-height ($profile-pic-size - $name-height - $links-height - $email-height) $links-height $email-height
     grid-column-gap: 3%
 
     margin-top: 75px
@@ -97,52 +97,59 @@ picture img
       max-width: 575px
       vertical-align: top
 
-    #contact
+    #links
       grid-column: 2
       grid-row: 3
-      br
-        display: none
       a:not(:last-child)
         margin-right: 20px
 
+    #email
+      grid-column: 2
+      grid-row: 4
 
-@media (max-width: 681px)  // smaller screen
+
+@media (max-width: 810px)  // smaller screen
   $name-height: 40px
-  $profile-pic-size: 25vw  // it's square
-  $contact-height: 50px
+  $profile-pic-size: 30vw  // it's square
+  $email-height: 20px
 
   h1
-    font-size: 8.5vw
+    font-size: 7vw
 
   #intro
     display: grid
     grid-template-columns: $profile-pic-size 1fr
-    grid-template-rows: $name-height calc(#{$profile-pic-size} - #{$name-height}) 1fr
+    grid-template-rows: $name-height calc(#{$profile-pic-size} - #{$name-height} - #{$email-height}) $email-height 1fr
     grid-column-gap: 20px
 
     margin-top: 35px
 
     picture
       grid-column: 1
-      grid-row: 1/3
+      grid-row: 1/4
       height: 95%
       align-self: end
 
     #name
       grid-column: 2
-      grid-row: 1/2
+      grid-row: 1
 
-    #contact
+    #links
       grid-column: 2
-      grid-row: 2/3
+      grid-row: 2
       align-self: end
+      padding-bottom: 5px
 
       a:not(:last-child)
         margin-right: 10px
 
+    #email
+      grid-column: 2
+      grid-row: 3
+
     #bio
       grid-column: 1/3
-      grid-row: 3/4
+      grid-row: 4
       padding-top: 1.5rem
 
 
