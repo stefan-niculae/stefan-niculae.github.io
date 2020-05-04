@@ -7,8 +7,7 @@ View online at http://stefann.eu
 
 ## Dev
 
-- compile, pug, sass, coffeescript
-- minify css
+- after editing style.sass, comment and uncomment `include style.min.css` in `index.pug`
 
 
 
@@ -20,22 +19,10 @@ Pdf version generated from Safari (10.0):
  - keep `page 1`
  - check `Print Backgrounds`
  - `Save as PDF` (in the lower left corner dropdown)
-
+ - Add link over `stefan-niculae` github/linkedin label
 
 
 
 ## TODO
 
- - add keywords
- - add h1, h2 for SEO
- - use svg sprites
-
-
- - maybe: 
-    - use google microdata
-    - add robots.txt
-    - script to update time periods
-    - add sitemap
- - future: 
-    - move to https
-    - make mobile version
+ - SEO: keywords, h1, h2
