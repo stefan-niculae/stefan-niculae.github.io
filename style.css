@@ -21,7 +21,6 @@
 
 /* Colors */
 body {
-  background-color: #fcfcfc;
   color: #222;
   margin-left: 10px;
   margin-right: 10px;
@@ -224,9 +223,6 @@ picture img {
 #projects .items article details {
   background-color: #f1f1f1;
   margin: 7px 3px 18px 1px;
-}
-#projects .items article details summary {
-  background-color: #fcfcfc;
 }
 #projects .items article details summary::after {
   content: "More info";
