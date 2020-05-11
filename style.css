@@ -22,6 +22,7 @@
 /* Colors */
 body {
   color: #222;
+  background-color: #fdfdfd;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -221,7 +222,6 @@ picture img {
   margin-bottom: 5px;
 }
 #projects .items article details {
-  background-color: #f1f1f1;
   margin: 7px 3px 18px 1px;
 }
 #projects .items article details summary::after {
