@@ -104,6 +104,10 @@ picture img {
     grid-row: 4;
   }
 }
+#resume-link {
+  color: #2522df;
+}
+
 @media (max-width: 810px) {
   h1 {
     font-size: 7vw;
