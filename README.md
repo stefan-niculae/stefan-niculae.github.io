@@ -1,7 +1,8 @@
-# stefan1niculae.github.io
-My one page resume.
+# stefan-niculae.github.io
 
-View online at http://stefann.eu
+Short summary of my academic and professional history.
+
+View online at https://stefann.eu
 
 
 
@@ -17,13 +18,9 @@ View online at http://stefann.eu
 
 ## Generate PDF
 
-Pdf version generated from Safari (10.0):
-
- - `cmd-P`
- - keep `page 1`
- - check `Print Backgrounds`
- - `Save as PDF` (in the lower left corner dropdown)
- - Add link over `stefan-niculae` github/linkedin label
+ - export as pdf
+ - compress
+ - add linkedin link over `stefan-niculae`
 
 
 
